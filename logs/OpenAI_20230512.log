@@ -1,0 +1,734 @@
+> 2023/05/12 12:35:07
+===================================
+
+user:User Request
+Top Pageを作成する
+
+
+Please select the required documents to answer from the list below.
+
+/home/runner/ProjectDreamJobsai/public/ai/prompt/:
+database_all.txt
+index.txt
+
+
+Txt(Comma sepalated)=
+
+database_all.txt, index.txt
+
+> 2023/05/12 12:36:04
+===================================
+
+user:User Request
+トップページの要件を書き出してください
+
+Please select the required documents to answer from the list below.
+
+/home/runner/ProjectDreamJobsai/public/ai/prompt/:
+database_all.txt
+index.txt
+
+
+Txt(Comma sepalated)=
+
+index.txt
+
+> 2023/05/12 12:37:01
+===================================
+
+user:# Project Summary:
+
+This project aims to develop a system to foster dual-model talent development and organizational innovation. The system will allow employees to contribute to both existing operations and new ventures, promoting a dynamic, project-based work environment. This will be achieved through four main components: dual-role management, project management, reward and incentive management, and token economy management.
+
+# Key Features:
+
+Dual-role Management: Enables employees to manage their roles in both existing businesses and innovative ventures, fostering a diverse work experience.
+Project Management: Functionality for creating, assigning, tracking, and completing projects to ensure smooth execution of tasks.
+Reward and Incentive Management: Allows for the distribution of rewards and incentives based on employee performance, promoting a performance-based culture.
+Token Economy Management: Manages the issuance, trading, and tracking of tokens, adding a unique incentive for employees.
+Performance Aspects:
+
+Scalability: With organizational growth, the system must scale up efficiently.
+Availability: High system availability is critical to maintain seamless operations.
+Security: Ensuring the confidentiality and availability of data is paramount.
+Interface Requirements:
+
+User Interface: The system will offer a user-friendly and intuitive interface.
+System Interface: Compatibility with other corporate systems is necessary for seamless integration.
+Constraints:
+
+Legal: Compliance with data protection and privacy regulations is mandatory.
+Technical: The system should align with the existing IT infrastructure.
+Technology Stack:
+
+The system will leverage various technologies such as PHP8.2 for backend, CockroachDB cloud for the database, Amazon S3 for storage, and Ethereum for blockchain operations. The frontend will be developed using PHP8.2 and Tailwind CSS. For containerization, Docker and Kubernetes will be used, and AWS will provide cloud services. GitHub Actions will be used for CI/CD. The system will also integrate with various messenger APIs.
+
+# Design Considerations:
+
+The system will support dual-model talent development and organizational innovation. The target users are the employees and managers within the organization. The platform will manage dual roles, projects, rewards, and token economy within the organization. The design will adhere to a color scheme featuring different shades of blue, green, off-white, and dark grey.
+
+# Database:
+
+# Project Summary:
+
+This project aims to develop a system to foster dual-model talent development and organizational innovation. The system will allow employees to contribute to both existing operations and new ventures, promoting a dynamic, project-based work environment. This will be achieved through four main components: dual-role management, project management, reward and incentive management, and token economy management.
+
+# Key Features:
+
+Dual-role Management: Enables employees to manage their roles in both existing businesses and innovative ventures, fostering a diverse work experience.
+Project Management: Functionality for creating, assigning, tracking, and completing projects to ensure smooth execution of tasks.
+Reward and Incentive Management: Allows for the distribution of rewards and incentives based on employee performance, promoting a performance-based culture.
+Token Economy Management: Manages the issuance, trading, and tracking of tokens, adding a unique incentive for employees.
+Performance Aspects:
+
+Scalability: With organizational growth, the system must scale up efficiently.
+Availability: High system availability is critical to maintain seamless operations.
+Security: Ensuring the confidentiality and availability of data is paramount.
+Interface Requirements:
+
+User Interface: The system will offer a user-friendly and intuitive interface.
+System Interface: Compatibility with other corporate systems is necessary for seamless integration.
+Constraints:
+
+Legal: Compliance with data protection and privacy regulations is mandatory.
+Technical: The system should align with the existing IT infrastructure.
+Technology Stack:
+
+The system will leverage various technologies such as PHP8.2 for backend, CockroachDB cloud for the database, Amazon S3 for storage, and Ethereum for blockchain operations. The frontend will be developed using PHP8.2 and Tailwind CSS. For containerization, Docker and Kubernetes will be used, and AWS will provide cloud services. GitHub Actions will be used for CI/CD. The system will also integrate with various messenger APIs.
+
+# Design Considerations:
+
+The system will support dual-model talent development and organizational innovation. The target users are the employees and managers within the organization. The platform will manage dual roles, projects, rewards, and token economy within the organization. The design will adhere to a color scheme featuring different shades of blue, green, off-white, and dark grey.
+
+# Database:
+
+{database}
+
+# Instructions:
+
+トップページの要件を書き出してください
+
+# Output File:
+
+{output}
+
+
+# Instructions:
+
+トップページの要件を書き出してください
+
+# Output File:
+
+{output}
+
+# Top Page Requirements:
+
+1. Navigation Bar: The top page should include a navigation bar with links to various sections of the platform, such as dual-role management, project management, reward and incentive management, and token economy management.
+
+2. User Authentication: The top page should provide a login and registration option for employees and managers to access the platform.
+
+3. Dashboard: Upon successful login, the top page should display a dashboard that provides an overview of the user's dual roles, ongoing projects, rewards, and token balance.
+
+4. Project Highlights: The top page should showcase a few highlighted projects, allowing users to quickly access and contribute to these projects.
+
+5. Performance Metrics: The top page should display key performance metrics, such as completed projects, rewards earned, and token balance, to encourage a performance-based culture.
+
+6. News and Updates: The top page should feature a section for company news and updates, keeping users informed about the latest developments within the organization.
+
+7. Search Functionality: The top page should include a search bar, allowing users to easily find projects, rewards, and other platform features.
+
+8. User Profile Access: The top page should provide quick access to the user's profile, allowing them to view and edit their personal information, dual roles, and project involvement.
+
+9. Help and Support: The top page should include a help and support section, providing users with access to FAQs, tutorials, and contact information for assistance.
+
+10. Footer: The top page should feature a footer with links to important information, such as terms of service, privacy policy, and contact details.
+
+# Output File:
+
+top_page_requirements.md
+
+> 2023/05/12 12:37:25
+===================================
+
+user:User Request
+1. Navigation Bar: The top page should include a navigation bar with links to various sections of the platform, such as dual-role management, project management, reward and incentive management, and token economy management.
+
+2. User Authentication: The top page should provide a login and registration option for employees and managers to access the platform.
+
+3. Dashboard: Upon successful login, the top page should display a dashboard that provides an overview of the user's dual roles, ongoing projects, rewards, and token balance.
+
+4. Project Highlights: The top page should showcase a few highlighted projects, allowing users to quickly access and contribute to these projects.
+
+5. Performance Metrics: The top page should display key performance metrics, such as completed projects, rewards earned, and token balance, to encourage a performance-based culture.
+
+6. News and Updates: The top page should feature a section for company news and updates, keeping users informed about the latest developments within the organization.
+
+7. Search Functionality: The top page should include a search bar, allowing users to easily find projects, rewards, and other platform features.
+
+8. User Profile Access: The top page should provide quick access to the user's profile, allowing them to view and edit their personal information, dual roles, and project involvement.
+
+9. Help and Support: The top page should include a help and support section, providing users with access to FAQs, tutorials, and contact information for assistance.
+
+10. Footer: The top page should feature a footer with links to important information, such as terms of service, privacy policy, and contact details.
+
+Create index.php
+
+Please select the required documents to answer from the list below.
+
+/home/runner/ProjectDreamJobsai/public/ai/prompt/:
+database_all.txt
+index.txt
+
+
+Txt(Comma sepalated)=
+
+index.txt, database_all.txt
+
+> 2023/05/12 12:39:34
+===================================
+
+user:# Project Summary:
+
+This project aims to develop a system to foster dual-model talent development and organizational innovation. The system will allow employees to contribute to both existing operations and new ventures, promoting a dynamic, project-based work environment. This will be achieved through four main components: dual-role management, project management, reward and incentive management, and token economy management.
+
+# Key Features:
+
+Dual-role Management: Enables employees to manage their roles in both existing businesses and innovative ventures, fostering a diverse work experience.
+Project Management: Functionality for creating, assigning, tracking, and completing projects to ensure smooth execution of tasks.
+Reward and Incentive Management: Allows for the distribution of rewards and incentives based on employee performance, promoting a performance-based culture.
+Token Economy Management: Manages the issuance, trading, and tracking of tokens, adding a unique incentive for employees.
+Performance Aspects:
+
+Scalability: With organizational growth, the system must scale up efficiently.
+Availability: High system availability is critical to maintain seamless operations.
+Security: Ensuring the confidentiality and availability of data is paramount.
+Interface Requirements:
+
+User Interface: The system will offer a user-friendly and intuitive interface.
+System Interface: Compatibility with other corporate systems is necessary for seamless integration.
+Constraints:
+
+Legal: Compliance with data protection and privacy regulations is mandatory.
+Technical: The system should align with the existing IT infrastructure.
+Technology Stack:
+
+The system will leverage various technologies such as PHP8.2 for backend, CockroachDB cloud for the database, Amazon S3 for storage, and Ethereum for blockchain operations. The frontend will be developed using PHP8.2 and Tailwind CSS. For containerization, Docker and Kubernetes will be used, and AWS will provide cloud services. GitHub Actions will be used for CI/CD. The system will also integrate with various messenger APIs.
+
+# Design Considerations:
+
+The system will support dual-model talent development and organizational innovation. The target users are the employees and managers within the organization. The platform will manage dual roles, projects, rewards, and token economy within the organization. The design will adhere to a color scheme featuring different shades of blue, green, off-white, and dark grey.
+
+# Database:
+
+# Project Summary:
+
+This project aims to develop a system to foster dual-model talent development and organizational innovation. The system will allow employees to contribute to both existing operations and new ventures, promoting a dynamic, project-based work environment. This will be achieved through four main components: dual-role management, project management, reward and incentive management, and token economy management.
+
+# Key Features:
+
+Dual-role Management: Enables employees to manage their roles in both existing businesses and innovative ventures, fostering a diverse work experience.
+Project Management: Functionality for creating, assigning, tracking, and completing projects to ensure smooth execution of tasks.
+Reward and Incentive Management: Allows for the distribution of rewards and incentives based on employee performance, promoting a performance-based culture.
+Token Economy Management: Manages the issuance, trading, and tracking of tokens, adding a unique incentive for employees.
+Performance Aspects:
+
+Scalability: With organizational growth, the system must scale up efficiently.
+Availability: High system availability is critical to maintain seamless operations.
+Security: Ensuring the confidentiality and availability of data is paramount.
+Interface Requirements:
+
+User Interface: The system will offer a user-friendly and intuitive interface.
+System Interface: Compatibility with other corporate systems is necessary for seamless integration.
+Constraints:
+
+Legal: Compliance with data protection and privacy regulations is mandatory.
+Technical: The system should align with the existing IT infrastructure.
+Technology Stack:
+
+The system will leverage various technologies such as PHP8.2 for backend, CockroachDB cloud for the database, Amazon S3 for storage, and Ethereum for blockchain operations. The frontend will be developed using PHP8.2 and Tailwind CSS. For containerization, Docker and Kubernetes will be used, and AWS will provide cloud services. GitHub Actions will be used for CI/CD. The system will also integrate with various messenger APIs.
+
+# Design Considerations:
+
+The system will support dual-model talent development and organizational innovation. The target users are the employees and managers within the organization. The platform will manage dual roles, projects, rewards, and token economy within the organization. The design will adhere to a color scheme featuring different shades of blue, green, off-white, and dark grey.
+
+# Database:
+
+{database}
+
+# Instructions:
+
+1. Navigation Bar: The top page should include a navigation bar with links to various sections of the platform, such as dual-role management, project management, reward and incentive management, and token economy management.
+
+2. User Authentication: The top page should provide a login and registration option for employees and managers to access the platform.
+
+3. Dashboard: Upon successful login, the top page should display a dashboard that provides an overview of the user's dual roles, ongoing projects, rewards, and token balance.
+
+4. Project Highlights: The top page should showcase a few highlighted projects, allowing users to quickly access and contribute to these projects.
+
+5. Performance Metrics: The top page should display key performance metrics, such as completed projects, rewards earned, and token balance, to encourage a performance-based culture.
+
+6. News and Updates: The top page should feature a section for company news and updates, keeping users informed about the latest developments within the organization.
+
+7. Search Functionality: The top page should include a search bar, allowing users to easily find projects, rewards, and other platform features.
+
+8. User Profile Access: The top page should provide quick access to the user's profile, allowing them to view and edit their personal information, dual roles, and project involvement.
+
+9. Help and Support: The top page should include a help and support section, providing users with access to FAQs, tutorials, and contact information for assistance.
+
+10. Footer: The top page should feature a footer with links to important information, such as terms of service, privacy policy, and contact details.
+
+Create index.php
+
+# Output File:
+
+{output}
+CREATE TABLE users (
+  user_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  username VARCHAR(255) UNIQUE NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z]{2,}$'),
+  password_hash VARCHAR(255) NOT NULL,
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
+  phone_number VARCHAR(15) CHECK (phone_number ~* '^\+?[1-9]\d{1,14}$'),
+  profile_image_url VARCHAR(255),
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE roles (
+  role_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  role_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE user_role (
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  role_id UUID REFERENCES roles(role_id),
+  PRIMARY KEY (user_id, role_id)
+);
+
+CREATE TABLE permissions (
+  permission_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  permission_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE role_permission (
+  role_id UUID REFERENCES roles(role_id),
+  permission_id UUID REFERENCES permissions(permission_id),
+  PRIMARY KEY (role_id, permission_id)
+);
+
+CREATE TABLE currencies (
+  currency_code CHAR(3) PRIMARY KEY,
+  conversion_rate DECIMAL(18, 6) NOT NULL
+);
+
+CREATE TABLE addresses (
+  address_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  street VARCHAR(255),
+  city VARCHAR(255),
+  state VARCHAR(255),
+  zip_code VARCHAR(10),
+  country VARCHAR(255)
+);
+
+ALTER TABLE users ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE real_estate_types (
+  real_estate_type_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  type_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE real_estates (
+  real_estate_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  real_estate_type_id UUID REFERENCES real_estate_types(real_estate_type_id),
+  address_id UUID REFERENCES addresses(address_id),
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE real_estates ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE reservations (
+  reservation_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  real_estate_id UUID REFERENCES real_estates(real_estate_id),
+  start_date TIMESTAMPTZ NOT NULL,
+  end_date TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE brands (
+  brand_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  brand_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE items (
+  item_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  category_id UUID REFERENCES categories(category_id),
+  brand_id UUID REFERENCES brands(brand_id),
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE items ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE digital_assets (
+  asset_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE digital_assets ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE purchases (
+  purchase_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  CHECK (item_id IS NOT NULL OR digital_asset_id IS NOT NULL),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE live_commerces (
+  live_commerce_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE inventories (
+  inventory_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  quantity INTEGER NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE auctions (
+  auction_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  starting_price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+ALTER TABLE auctions ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE bids (
+  bid_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  auction_id UUID REFERENCES auctions(auction_id),
+  bid_amount DECIMAL(10, 2) NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE streaming_sessions (
+  session_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE donations (
+  donation_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  streaming_session_id UUID REFERENCES streaming_sessions(session_id),
+  amount DECIMAL(10, 2) NOT NULL,
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE donations ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE cookies (
+  cookie_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  cookie_key VARCHAR(255) NOT NULL,
+  cookie_value VARCHAR(255) NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+# Instructions:
+
+1. Navigation Bar: The top page should include a navigation bar with links to various sections of the platform, such as dual-role management, project management, reward and incentive management, and token economy management.
+
+2. User Authentication: The top page should provide a login and registration option for employees and managers to access the platform.
+
+3. Dashboard: Upon successful login, the top page should display a dashboard that provides an overview of the user's dual roles, ongoing projects, rewards, and token balance.
+
+4. Project Highlights: The top page should showcase a few highlighted projects, allowing users to quickly access and contribute to these projects.
+
+5. Performance Metrics: The top page should display key performance metrics, such as completed projects, rewards earned, and token balance, to encourage a performance-based culture.
+
+6. News and Updates: The top page should feature a section for company news and updates, keeping users informed about the latest developments within the organization.
+
+7. Search Functionality: The top page should include a search bar, allowing users to easily find projects, rewards, and other platform features.
+
+8. User Profile Access: The top page should provide quick access to the user's profile, allowing them to view and edit their personal information, dual roles, and project involvement.
+
+9. Help and Support: The top page should include a help and support section, providing users with access to FAQs, tutorials, and contact information for assistance.
+
+10. Footer: The top page should feature a footer with links to important information, such as terms of service, privacy policy, and contact details.
+
+Create index.php
+
+# Output File:
+
+{output}
+
+```php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dual-Model Talent Development and Organizational Innovation System</title>
+    <!-- Add Tailwind CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-off-white">
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-500 p-6">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-white font-bold">Dual-Model System</a>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white">Dual-Role Management</a>
+                    <a href="#" class="text-white">Project Management</a>
+                    <a href="#" class="text-white">Reward and Incentive Management</a>
+                    <a href="#" class="text-white">Token Economy Management</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- User Authentication -->
+    <div class="container mx-auto mt-10">
+        <div class="flex justify-center">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-center text-2xl font-bold mb-4">Login</h2>
+                <form>
+                    <div class="mb-4">
+                        <label for="email" class="block mb-2">Email</label>
+                        <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded">
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="block mb-2">Password</label>
+                        <input type="password" id="password" class="w-full p-2 border border-gray-300 rounded">
+                    </div>
+                    <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded">Login</button>
+                </form>
+                <p class="text-center mt-4">Don't have an account? <a href="#" class="text-blue-500">Register</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard, Project Highlights, Performance Metrics, News and Updates, Search Functionality, User Profile Access, Help and Support, and Footer will be displayed after successful login -->
+
+</body>
+</html>
+```
+
+Save the above code as `index.php` in your project directory. This file will serve as the top page for your dual-model talent development and organizational innovation system. The file includes the navigation bar, user authentication, and placeholders for other sections that will be displayed after successful login.
+
+> 2023/05/12 12:49:22
+===================================
+
+user:User Request
+***TOPページ***
+
+デザイン要件:
+- メニューバーは青色
+- メニューバーの文字は白色
+- メニューには'お問い合わせ'リンクを設け、/contactにリンクさせる
+
+Create index.php
+
+Please select the required documents to answer from the list below.
+
+/home/runner/ProjectDreamJobsai/public/ai/prompt/:
+database_all.txt
+index.txt
+
+
+Txt(Comma sepalated)=
+
+index.txt
+
+> 2023/05/12 12:49:59
+===================================
+
+user:# Project Summary:
+
+This project aims to develop a system to foster dual-model talent development and organizational innovation. The system will allow employees to contribute to both existing operations and new ventures, promoting a dynamic, project-based work environment. This will be achieved through four main components: dual-role management, project management, reward and incentive management, and token economy management.
+
+# Key Features:
+
+Dual-role Management: Enables employees to manage their roles in both existing businesses and innovative ventures, fostering a diverse work experience.
+Project Management: Functionality for creating, assigning, tracking, and completing projects to ensure smooth execution of tasks.
+Reward and Incentive Management: Allows for the distribution of rewards and incentives based on employee performance, promoting a performance-based culture.
+Token Economy Management: Manages the issuance, trading, and tracking of tokens, adding a unique incentive for employees.
+Performance Aspects:
+
+Scalability: With organizational growth, the system must scale up efficiently.
+Availability: High system availability is critical to maintain seamless operations.
+Security: Ensuring the confidentiality and availability of data is paramount.
+Interface Requirements:
+
+User Interface: The system will offer a user-friendly and intuitive interface.
+System Interface: Compatibility with other corporate systems is necessary for seamless integration.
+Constraints:
+
+Legal: Compliance with data protection and privacy regulations is mandatory.
+Technical: The system should align with the existing IT infrastructure.
+Technology Stack:
+
+The system will leverage various technologies such as PHP8.2 for backend, CockroachDB cloud for the database, Amazon S3 for storage, and Ethereum for blockchain operations. The frontend will be developed using PHP8.2 and Tailwind CSS. For containerization, Docker and Kubernetes will be used, and AWS will provide cloud services. GitHub Actions will be used for CI/CD. The system will also integrate with various messenger APIs.
+
+# Design Considerations:
+
+The system will support dual-model talent development and organizational innovation. The target users are the employees and managers within the organization. The platform will manage dual roles, projects, rewards, and token economy within the organization. The design will adhere to a color scheme featuring different shades of blue, green, off-white, and dark grey.
+
+# Database:
+
+# Project Summary:
+
+This project aims to develop a system to foster dual-model talent development and organizational innovation. The system will allow employees to contribute to both existing operations and new ventures, promoting a dynamic, project-based work environment. This will be achieved through four main components: dual-role management, project management, reward and incentive management, and token economy management.
+
+# Key Features:
+
+Dual-role Management: Enables employees to manage their roles in both existing businesses and innovative ventures, fostering a diverse work experience.
+Project Management: Functionality for creating, assigning, tracking, and completing projects to ensure smooth execution of tasks.
+Reward and Incentive Management: Allows for the distribution of rewards and incentives based on employee performance, promoting a performance-based culture.
+Token Economy Management: Manages the issuance, trading, and tracking of tokens, adding a unique incentive for employees.
+Performance Aspects:
+
+Scalability: With organizational growth, the system must scale up efficiently.
+Availability: High system availability is critical to maintain seamless operations.
+Security: Ensuring the confidentiality and availability of data is paramount.
+Interface Requirements:
+
+User Interface: The system will offer a user-friendly and intuitive interface.
+System Interface: Compatibility with other corporate systems is necessary for seamless integration.
+Constraints:
+
+Legal: Compliance with data protection and privacy regulations is mandatory.
+Technical: The system should align with the existing IT infrastructure.
+Technology Stack:
+
+The system will leverage various technologies such as PHP8.2 for backend, CockroachDB cloud for the database, Amazon S3 for storage, and Ethereum for blockchain operations. The frontend will be developed using PHP8.2 and Tailwind CSS. For containerization, Docker and Kubernetes will be used, and AWS will provide cloud services. GitHub Actions will be used for CI/CD. The system will also integrate with various messenger APIs.
+
+# Design Considerations:
+
+The system will support dual-model talent development and organizational innovation. The target users are the employees and managers within the organization. The platform will manage dual roles, projects, rewards, and token economy within the organization. The design will adhere to a color scheme featuring different shades of blue, green, off-white, and dark grey.
+
+# Database:
+
+{database}
+
+# Instructions:
+
+***TOPページ***
+
+デザイン要件:
+- メニューバーは青色
+- メニューバーの文字は白色
+- メニューには'お問い合わせ'リンクを設け、/contactにリンクさせる
+
+Create index.php
+
+# Output File:
+
+{output}
+
+
+# Instructions:
+
+***TOPページ***
+
+デザイン要件:
+- メニューバーは青色
+- メニューバーの文字は白色
+- メニューには'お問い合わせ'リンクを設け、/contactにリンクさせる
+
+Create index.php
+
+# Output File:
+
+{output}
+
+index.php
+
+```php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-blue-500">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-white font-bold text-xl">
+                    Company Name
+                </div>
+                <div class="text-white">
+                    <a href="/contact" class="hover:text-blue-300">お問い合わせ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Main content goes here -->
+    </main>
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
+</html>
+```
+

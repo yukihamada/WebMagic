@@ -1,0 +1,74 @@
+# Project Overview:
+
+Enabler is a global marketplace for renting, buying, and selling high-end assets such as homes, villas, cars, boats, and airplanes. Initially focusing on luxury assets, we will implement a secure payment system and a rating and review system to ensure reliability. We will also develop an easy-to-use UI/UX design and mobile app, and provide a rapid customer support system. We will pay close attention to legal regulations and permits, and aim to spread our brand around the world with an effective marketing strategy. Our slogan is "SWAP YOUR Luxury" to provide a rich lifestyle. This project aims to develop a comprehensive platform for user authentication, profile management, property and item management, reservation and purchase functionality, live commerce, auction management, streaming, role-based access control, inventory management, blockchain technology, multi-channel support, digital item management, machine learning and AI utilization, social media integration, point and reward system, push notification functionality, and data analysis and reporting.
+
+# Requirements:
+
+- User authentication and profile management, including user registration, login, logout functionality, profile information editing functionality, and password reset functionality.
+- Property and item management, reservation functionality, and purchase functionality, including property and item registration, editing, deletion functionality, property and item search, filtering, sorting functionality, and reservation and purchase functionality.
+- User review and rating functionality.
+- Live commerce management, reservation functionality, and purchase functionality, including live commerce scheduling management functionality, live commerce viewing, chat participation functionality, and live commerce product purchasing functionality.
+- Auction management, bidding functionality, acceptance, and purchase functionality, including auction registration, editing, deletion functionality, bidding functionality, and auction acceptance and purchase functionality.
+- Streaming functionality and tipping functionality, including streaming scheduling management functionality, streaming viewing, chat participation functionality, and tipping functionality.
+- Role-based access control, including role definition for administrators, operators, and users, and setting access permissions for each role.
+- Inventory management functionality, including inventory registration, editing, deletion functionality, and inventory search, filtering, and sorting functionality.
+- Blockchain technology, including blockchainization of transactions and implementation of smart contracts.
+- Multi-channel support: web, all messenger apps, phone, including web application implementation, integration with messenger apps (Slack, Chatwork, Instagram, etc.), and phone API-based calling functionality.
+- Site requirements: responsive design, accessibility support, security measures, multi-language support, and SEO optimization.
+- Digital item management, purchase functionality, and auction functionality, including digital item registration, editing, deletion functionality, digital item search, filtering, sorting functionality, digital item purchase functionality, digital item auction listing, bidding, acceptance functionality, and blockchain-based transaction of digital items (NFTization).
+- Utilization of machine learning and AI, including recommendation system implementation, information extraction and tagging through image recognition, and introduction of AI chatbot.
+- Social media integration functionality, including SNS sharing functionality and automatic posting to social media functionality.
+- Point and reward system, including setting of point acquisition rules and provision of benefits and discounts through point usage.
+- Push notification functionality, including push notification for new information and announcements.
+- Data analysis and reporting functionality, including sales and usage analysis functionality and report creation functionality.
+
+# Technology Stack:
+
+- Backend: PHP8.2
+- Database: CockroachDB cloud
+- Storage: Amazon S3
+- Blockchain: Ethereum
+- Video streaming: Amazon IVS
+- API design: RESTful API
+- Frontend: React.js, Tailwind CSS
+- Containerization: Docker
+- Container orchestration: Kubernetes
+- Cloud services: AWS
+- CI/CD: GitHub Actions
+- Messenger APIs: Twilio API, Facebook Messenger API, LINE Messaging API
+- Phone API: Twilio Voice API
+
+# Design Considerations:
+
+- Business goals: Target affluent customers and provide a platform for renting and buying luxury items such as villas, airplanes, boats, and cars. Focus on villas to achieve sales targets and market share. Expand the service to include items such as watches, fashion items, and appliances.
+- Target users: Affluent customers and those interested in luxury items.
+- Service description: A platform centered around villas for renting and buying luxury items such as cars, airplanes, and boats. Frequently used features are placed in easily accessible locations, with a focus on smartphone operability.
+- Color scheme: Base Green (#4CAF50), Dark Green (#388E3C), Light Green (#C8E6C9), Sub Color (Blue) (#2196F3), Background Color (Off White) (#FAFAFA), Text Color (Dark Grey) (#424242).
+- Typography: Font Family (Noto Sans), Main Body Text (18px), Subtitles (24px), Titles (48px), Navigation Bar Text (16px).
+- Layout: Simple and clean design, responsive design, focus on usability and operability.
+- Navigation: Clear and easy-to-use navigation bar, utilizing modal windows and drawer menus.
+- Imagery: High-quality images, incorporating parallax effects and smooth animations.
+- Accessibility: Implement read-aloud functionality and multi-language support, following accessibility guidelines.
+- Animation and effects: Prioritize execution speed and use minimal animations, applying stress-relieving animations where appropriate.
+- Security: Enhance security using AI and decentralized identity (DID).
+- SEO: Follow SEO best practices to optimize the site for search engines, setting appropriate title tags, meta descriptions, keywords, and URL structures.
+- Domain: enabler.fun
+
+# Output Rule
+- Please do not use integrity for CSS and JavaScript
+
+# Database
+{database}
+
+# Reference for DB operation
+$DB = DB();
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+# Instruction
+{instruction}
+
+# Output File
+{output}

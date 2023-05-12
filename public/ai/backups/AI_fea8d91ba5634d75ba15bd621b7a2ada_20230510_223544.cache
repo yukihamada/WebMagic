@@ -1,0 +1,78 @@
+Here's a simple PHP script for user registration using the provided database schema:
+
+```php
+<?php
+require_once 'db.php';
+
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Get the submitted form data
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $firstName = $_POST['first_name'];
+    $lastName = $_POST['last_name'];
+    $phoneNumber = $_POST['phone_number'];
+
+    // Validate the submitted data
+    if (empty($username) || empty($email) || empty($password)) {
+        echo "Username, email, and password are required.";
+        exit;
+    }
+
+    // Hash the password
+    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
+    // Insert the user data into the database
+    try {
+        $stmt = $DB->prepare("INSERT INTO users (username, email, password_hash, first_name, last_name, phone_number) VALUES (:username, :email, :password_hash, :first_name, :last_name, :phone_number)");
+        $stmt->bindParam(':username', $username);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':password_hash', $passwordHash);
+        $stmt->bindParam(':first_name', $firstName);
+        $stmt->bindParam(':last_name', $lastName);
+        $stmt->bindParam(':phone_number', $phoneNumber);
+        $stmt->execute();
+
+        echo "User registered successfully!";
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form action="" method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <br>
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" id="first_name">
+        <br>
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" id="last_name">
+        <br>
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" name="phone_number" id="phone_number">
+        <br>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
+```
+
+This script creates a simple registration form and processes the submitted data to insert a new user into the `users` table. Make sure to include the `db.php` file at the beginning of the script to connect to the database.

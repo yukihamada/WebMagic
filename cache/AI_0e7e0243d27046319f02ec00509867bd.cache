@@ -1,0 +1,33 @@
+index.php
+
+```php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-blue-500">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-white font-bold text-xl">
+                    Company Name
+                </div>
+                <div class="text-white">
+                    <a href="/contact" class="hover:text-blue-300">お問い合わせ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Main content goes here -->
+    </main>
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
+</html>
+```

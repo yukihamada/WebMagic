@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求人募集ページ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .menu-bar {
+            background-color: #CCC;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-bar a {
+            color: white;
+            text-decoration: none;
+        }
+        .content {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <a href="/">ホーム</a>
+        <a href="/contact">お問い合わせ</a>
+    </div>
+    <div class="content">
+        <h1>我々は優秀な人材を求めています。詳細は下記をご覧ください。</h1>
+        <h2>募集職種</h2>
+        <ul>
+            <li>エンジニア</li>
+            <li>デザイナー</li>
+            <li>マーケティング</li>
+        </ul>
+        <h2>必要スキル</h2>
+        <ul>
+            <li>プログラミング言語（Java, Python, etc.）</li>
+            <li>デザインツール（Photoshop, Illustrator, etc.）</li>
+            <li>マーケティング戦略</li>
+        </ul>
+        <h2>待遇</h2>
+        <ul>
+            <li>給与：応相談</li>
+            <li>福利厚生：各種社会保険完備</li>
+            <li>休暇：週休二日制、年末年始休暇、有給休暇</li>
+        </ul>
+    </div>
+</body>
+</html>

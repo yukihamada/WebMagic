@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enabler - Swap Your Luxury</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css" integrity="sha512-pZl2J+zlFrPo7KwEPEftC1tij7d8loM7TbE91v9G6t5E/5e/6wbDsK+j6eSPJ5+hD5vF7A6G9+KyMaz0iKhxgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="bg-green-500">
+        <nav class="container mx-auto flex items-center justify-between py-4">
+            <div class="text-white font-bold text-xl">
+                Enabler
+            </div>
+            <ul class="flex items-center space-x-6 text-black">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Villas</a></li>
+                <li><a href="#">Cars</a></li>
+                <li><a href="#">Boats</a></li>
+                <li><a href="#">Airplanes</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container mx-auto py-12">
+            <h2 class="text-3xl font-bold mb-6">Featured Properties</h2>
+            <div class="grid grid-cols-3 gap-6">
+                <div class="bg-gray-200 p-4 rounded">
+                    <img src="https://via.placeholder.com/300x200" alt="Property 1" class="mb-4">
+                    <h3 class="text-xl font-bold mb-2">Property 1</h3>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="bg-gray-200 p-4 rounded">
+                    <img src="https://via.placeholder.com/300x200" alt="Property 2" class="mb-4">
+                    <h3 class="text-xl font-bold mb-2">Property 2</h3>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="bg-gray-200 p-4 rounded">
+                    <img src="https://via.placeholder.com/300x200" alt="Property 3" class="mb-4">
+                    <h3 class="text-xl font-bold mb-2">Property 3</h3>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="bg-gray-200 p-4 rounded">
+                    <img src="https://via.placeholder.com/300x200" alt="Property 4" class="mb-4">
+                    <h3 class="text-xl font-bold mb-2">Property 4</h3>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="bg-gray-200 p-4 rounded">
+                    <img src="https://via.placeholder.com/300x200" alt="Property 5" class="mb-4">
+                    <h3 class="text-xl font-bold mb-2">Property 5</h3>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="bg-gray-200 p-4 rounded">
+                    <img src="https://via.placeholder.com/300x200" alt="Property 6" class="mb-4">
+                    <h3 class="text-xl font-bold mb-2">Property 6</h3>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-green-500 py-6">
+        <div class="container mx-auto text-center text-white">
+            &copy; 2022 Enabler. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
