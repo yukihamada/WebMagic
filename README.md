@@ -1,5 +1,4 @@
-[WebMagic](https://github.com/yukihamada/WebMagic/blob/main/public/logo.png?raw=true)
-
+![WebMagic](https://github.com/yukihamada/WebMagic/blob/main/public/logo.png?raw=true)
 
 # LLMを使ったWEBシステム構築システム
 
