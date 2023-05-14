@@ -1,8 +1,9 @@
 <?php
 
 if(isset($_GET["code"]) && isset($_GET["prompt"]) && isset($_GET["script"])) {
+    $_GET["script"] = ltrim($_GET["script"], '/');
 
-    $file = dirname(__FILE__)."/../../cache/AI_".md5($_GET["prompt"]).".cache";
+    $file = dirname(__FILE__)."/../cache/AI_".md5($_GET["prompt"]).".cache";
     if (file_exists($file)) {
         $time = date("Ymd_His");
         $ext = pathinfo($file, PATHINFO_EXTENSION);
@@ -16,13 +17,14 @@ if(isset($_GET["code"]) && isset($_GET["prompt"]) && isset($_GET["script"])) {
       mkdir($folder_path, 0777, true);
     }
     file_put_contents($file, $_GET["code"]);
-    $buf = file_get_contents(dirname(__DIR__)."/../".$_GET["script"]);
+
+    $buf = file_get_contents(dirname(__DIR__)."/".$_GET["script"]);
     $buf = preg_replace("/PROMPT\([\"|'](.*?)[\"|']\)/is","PROMPT(\"{$_GET["prompt"]}\")",$buf);
 
 if(!$buf){
   $buf = "<?php\nPROMPT(\"{$_GET["prompt"]}\");";
 }
-    file_put_contents(dirname(__DIR__)."/../".$_GET["script"],$buf);
+    echo file_put_contents(dirname(__DIR__)."/".$_GET["script"],$buf);
 
     exit();
 }
@@ -53,12 +55,15 @@ if (
 
 }
 
-$script = str_replace(str_replace("/ai","",__DIR__),"",$_SERVER['SCRIPT_FILENAME']);
-
-if(preg_match("/router\.php$/",$script)){
-   $script = "..".parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-  
+if(!isset($_SERVER["PATH_INFO"])){
+  $_SERVER["PATH_INFO"] = "index.php";
 }
+$script = $_SERVER["PATH_INFO"];
+
+if(!preg_match("/\.php$/",$script)){
+   $script = $script.".php";
+}
+
 if(preg_match("/loading\.php$/",$script)){
   echo "Error: Not Found";
   exit();
@@ -90,7 +95,7 @@ if(isset($_GET["code"]) && isset($_GET["execute"])) {
   <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/php/php.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/sql/sql.min.js"></script>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.1/theme/monokai.min.css" />
-  <script src="//cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+</script>
 
   <style>
 body {
@@ -147,7 +152,6 @@ button:hover {
 <div class="col-md-6 d-flex align-items-end">
   <button id="save" class="btn btn-primary ml-3">コードを保存</button>
   <button id="execute" class="btn btn-primary ml-3">コードを実行</button>
-  <button id="switch-to-wysiwyg" class="btn btn-primary ml-3">WYSIWYGエディタに切り替え</button>
 <button type="button" id="check-site-btn" class="btn btn-secondary">サイトを確認する</button>
 </div>
 
@@ -156,16 +160,6 @@ button:hover {
 </div>
 
 <script>
-<?php
-if(!isset($code)){
-?>
-window.onload = function() {
-  var promptText = document.getElementById("prompt").value;
-  app.generate(promptText);
-};
-<?php
-}
-?>
 
 class App {
   constructor() {
@@ -190,12 +184,12 @@ class App {
     const code = this.codeMirrorInstances.get("code").getValue();
     this.executePHP(code);
   });
-document.getElementById("switch-to-wysiwyg").addEventListener("click", () => {
-  const code = this.codeMirrorInstances.get("code").getValue();
-  this.codeMirrorInstances.get("code").toTextArea();
-  CKEDITOR.replace('code');
-  CKEDITOR.instances.code.setData(code);  
-});
+// document.getElementById("switch-to-wysiwyg").addEventListener("click", () => {
+//   const code = this.codeMirrorInstances.get("code").getValue();
+//   this.codeMirrorInstances.get("code").toTextArea();
+//   CKEDITOR.replace('code');
+//   CKEDITOR.instances.code.setData(code);  
+// });
 const checkSiteBtn = document.getElementById("check-site-btn");
 checkSiteBtn.addEventListener("click", function() {
   const script = document.getElementById("script").value;

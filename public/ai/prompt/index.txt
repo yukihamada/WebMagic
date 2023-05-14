@@ -51,23 +51,16 @@ Enabler is a global marketplace for renting, buying, and selling high-end assets
 - Imagery: High-quality images, incorporating parallax effects and smooth animations.
 - Accessibility: Implement read-aloud functionality and multi-language support, following accessibility guidelines.
 - Animation and effects: Prioritize execution speed and use minimal animations, applying stress-relieving animations where appropriate.
-- Security: Enhance security using AI and decentralized identity (DID).
 - SEO: Follow SEO best practices to optimize the site for search engines, setting appropriate title tags, meta descriptions, keywords, and URL structures.
 - Domain: enabler.fun
+
+# Documents
+{database}
+{extra}
 
 # Output Rule
 - DO NOT use integrity for CSS and JavaScript
 - DO NOT require or include any PHP Files.
-
-# Database
-{database}
-
-# Reference for DB operation
-$DB = DB();//CockroachDB
-$query = "SELECT * FROM real_estates";
-$stmt = $DB->prepare($query);
-$stmt->execute();
-$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 # Instruction
 {instruction}

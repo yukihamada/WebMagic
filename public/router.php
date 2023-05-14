@@ -27,6 +27,9 @@ try {
     @parse_str($query, $_GET);  
   }
 
+  if(preg_match("/\/$/",$path)){
+    $path = $path . 'index.php';    
+  }
 
   if (file_exists(__DIR__ . $path) && is_file(__DIR__ . $path)) {
       return false;
@@ -37,18 +40,18 @@ try {
     exit();
   }
   
-  $index_file = __DIR__ . '/index.php';
-  
-  if (file_exists($index_file) && is_file($index_file)) {
-      return false;
-  }
-  
   $file_404 = __DIR__ . '/404.php';
   
   // リクエストされたURLに応じて、PATH_INFO環境変数を設定
   $_SERVER['PATH_INFO'] = $path;
-  
-  require $file_404;
+
+  if(isset($_GET["m"])){
+    if($_GET["m"] == "e"){
+        prompt("");
+    }    
+  }else{
+    require $file_404;    
+  }
   
 } catch (Exception $e) {
     // Handle exception

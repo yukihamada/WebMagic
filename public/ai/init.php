@@ -71,7 +71,7 @@ function LIVE($prompt, $output){
 
 Please select the required documents to answer from the list below.
 
-".shell_exec("ls database* {$dir}")."
+".shell_exec("ls {$dir}")."
 
 Txt(Comma sepalated)=");
 
@@ -80,19 +80,25 @@ Txt(Comma sepalated)=");
     $array = explode(',', $txts);
   
     $database = "";
+    $extra = "";
     if(count($array) > 0){
       foreach ($array as $filename) {
         $filename = trim($filename);
         if(file_exists($dir.$filename) && $filename != "index.txt"){
-          die($dir.$filename);
-          $data = file_get_contents($dir.$filename);
-          $database .= $data."\n";
+          if(preg_match("/database/",$filename)){
+            $data = file_get_contents($dir.$filename);
+            $database .= $data."\n";            
+          }else{
+            $data = file_get_contents($dir.$filename);
+            $extra .= $data."\n";            
+          }
         }
       }
     }      
   }
 
   $index = @str_replace('{database}', $database, $index);
+  $index = @str_replace('{extra}', $extra, $index);
   $index = @str_replace('{instruction}', $prompt, $index);
   $index = @str_replace('{output}', $output, $index);
 

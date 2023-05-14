@@ -1,0 +1,6 @@
+# Reference for DB operation
+$DB = DB();//CockroachDB
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
