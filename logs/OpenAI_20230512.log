@@ -732,3 +732,2447 @@ index.php
 </html>
 ```
 
+> 2023/05/12 06:39:37
+===================================
+
+user:User Request
+Create 404.php
+
+Please select the required documents to answer from the list below.
+
+/home/runner/WebMagic/public/ai/prompt/:
+database_all.txt
+index.txt
+
+
+Txt(Comma sepalated)=
+
+index.txt, database_all.txt
+
+> 2023/05/12 06:40:37
+===================================
+
+user:# Project Overview:
+
+Enabler is a global marketplace for renting, buying, and selling high-end assets such as homes, villas, cars, boats, and airplanes. Initially focusing on luxury assets, we will implement a secure payment system and a rating and review system to ensure reliability. We will also develop an easy-to-use UI/UX design and mobile app, and provide a rapid customer support system. We will pay close attention to legal regulations and permits, and aim to spread our brand around the world with an effective marketing strategy. Our slogan is "SWAP YOUR Luxury" to provide a rich lifestyle. This project aims to develop a comprehensive platform for user authentication, profile management, property and item management, reservation and purchase functionality, live commerce, auction management, streaming, role-based access control, inventory management, blockchain technology, multi-channel support, digital item management, machine learning and AI utilization, social media integration, point and reward system, push notification functionality, and data analysis and reporting.
+
+# Requirements:
+
+- User authentication and profile management, including user registration, login, logout functionality, profile information editing functionality, and password reset functionality.
+- Property and item management, reservation functionality, and purchase functionality, including property and item registration, editing, deletion functionality, property and item search, filtering, sorting functionality, and reservation and purchase functionality.
+- User review and rating functionality.
+- Live commerce management, reservation functionality, and purchase functionality, including live commerce scheduling management functionality, live commerce viewing, chat participation functionality, and live commerce product purchasing functionality.
+- Auction management, bidding functionality, acceptance, and purchase functionality, including auction registration, editing, deletion functionality, bidding functionality, and auction acceptance and purchase functionality.
+- Streaming functionality and tipping functionality, including streaming scheduling management functionality, streaming viewing, chat participation functionality, and tipping functionality.
+- Role-based access control, including role definition for administrators, operators, and users, and setting access permissions for each role.
+- Inventory management functionality, including inventory registration, editing, deletion functionality, and inventory search, filtering, and sorting functionality.
+- Blockchain technology, including blockchainization of transactions and implementation of smart contracts.
+- Multi-channel support: web, all messenger apps, phone, including web application implementation, integration with messenger apps (Slack, Chatwork, Instagram, etc.), and phone API-based calling functionality.
+- Site requirements: responsive design, accessibility support, security measures, multi-language support, and SEO optimization.
+- Digital item management, purchase functionality, and auction functionality, including digital item registration, editing, deletion functionality, digital item search, filtering, sorting functionality, digital item purchase functionality, digital item auction listing, bidding, acceptance functionality, and blockchain-based transaction of digital items (NFTization).
+- Utilization of machine learning and AI, including recommendation system implementation, information extraction and tagging through image recognition, and introduction of AI chatbot.
+- Social media integration functionality, including SNS sharing functionality and automatic posting to social media functionality.
+- Point and reward system, including setting of point acquisition rules and provision of benefits and discounts through point usage.
+- Push notification functionality, including push notification for new information and announcements.
+- Data analysis and reporting functionality, including sales and usage analysis functionality and report creation functionality.
+
+# Technology Stack:
+
+- Backend: PHP8.2
+- Database: CockroachDB cloud
+- Storage: Amazon S3
+- Blockchain: Ethereum
+- Video streaming: Amazon IVS
+- API design: RESTful API
+- Frontend: React.js, Tailwind CSS
+- Containerization: Docker
+- Container orchestration: Kubernetes
+- Cloud services: AWS
+- CI/CD: GitHub Actions
+- Messenger APIs: Twilio API, Facebook Messenger API, LINE Messaging API
+- Phone API: Twilio Voice API
+
+# Design Considerations:
+
+- Business goals: Target affluent customers and provide a platform for renting and buying luxury items such as villas, airplanes, boats, and cars. Focus on villas to achieve sales targets and market share. Expand the service to include items such as watches, fashion items, and appliances.
+- Target users: Affluent customers and those interested in luxury items.
+- Service description: A platform centered around villas for renting and buying luxury items such as cars, airplanes, and boats. Frequently used features are placed in easily accessible locations, with a focus on smartphone operability.
+- Color scheme: Base Green (#4CAF50), Dark Green (#388E3C), Light Green (#C8E6C9), Sub Color (Blue) (#2196F3), Background Color (Off White) (#FAFAFA), Text Color (Dark Grey) (#424242).
+- Typography: Font Family (Noto Sans), Main Body Text (18px), Subtitles (24px), Titles (48px), Navigation Bar Text (16px).
+- Layout: Simple and clean design, responsive design, focus on usability and operability.
+- Navigation: Clear and easy-to-use navigation bar, utilizing modal windows and drawer menus.
+- Imagery: High-quality images, incorporating parallax effects and smooth animations.
+- Accessibility: Implement read-aloud functionality and multi-language support, following accessibility guidelines.
+- Animation and effects: Prioritize execution speed and use minimal animations, applying stress-relieving animations where appropriate.
+- Security: Enhance security using AI and decentralized identity (DID).
+- SEO: Follow SEO best practices to optimize the site for search engines, setting appropriate title tags, meta descriptions, keywords, and URL structures.
+- Domain: enabler.fun
+
+# Output Rule
+- Please do not use integrity for CSS and JavaScript
+
+# Database
+# Project Overview:
+
+Enabler is a global marketplace for renting, buying, and selling high-end assets such as homes, villas, cars, boats, and airplanes. Initially focusing on luxury assets, we will implement a secure payment system and a rating and review system to ensure reliability. We will also develop an easy-to-use UI/UX design and mobile app, and provide a rapid customer support system. We will pay close attention to legal regulations and permits, and aim to spread our brand around the world with an effective marketing strategy. Our slogan is "SWAP YOUR Luxury" to provide a rich lifestyle. This project aims to develop a comprehensive platform for user authentication, profile management, property and item management, reservation and purchase functionality, live commerce, auction management, streaming, role-based access control, inventory management, blockchain technology, multi-channel support, digital item management, machine learning and AI utilization, social media integration, point and reward system, push notification functionality, and data analysis and reporting.
+
+# Requirements:
+
+- User authentication and profile management, including user registration, login, logout functionality, profile information editing functionality, and password reset functionality.
+- Property and item management, reservation functionality, and purchase functionality, including property and item registration, editing, deletion functionality, property and item search, filtering, sorting functionality, and reservation and purchase functionality.
+- User review and rating functionality.
+- Live commerce management, reservation functionality, and purchase functionality, including live commerce scheduling management functionality, live commerce viewing, chat participation functionality, and live commerce product purchasing functionality.
+- Auction management, bidding functionality, acceptance, and purchase functionality, including auction registration, editing, deletion functionality, bidding functionality, and auction acceptance and purchase functionality.
+- Streaming functionality and tipping functionality, including streaming scheduling management functionality, streaming viewing, chat participation functionality, and tipping functionality.
+- Role-based access control, including role definition for administrators, operators, and users, and setting access permissions for each role.
+- Inventory management functionality, including inventory registration, editing, deletion functionality, and inventory search, filtering, and sorting functionality.
+- Blockchain technology, including blockchainization of transactions and implementation of smart contracts.
+- Multi-channel support: web, all messenger apps, phone, including web application implementation, integration with messenger apps (Slack, Chatwork, Instagram, etc.), and phone API-based calling functionality.
+- Site requirements: responsive design, accessibility support, security measures, multi-language support, and SEO optimization.
+- Digital item management, purchase functionality, and auction functionality, including digital item registration, editing, deletion functionality, digital item search, filtering, sorting functionality, digital item purchase functionality, digital item auction listing, bidding, acceptance functionality, and blockchain-based transaction of digital items (NFTization).
+- Utilization of machine learning and AI, including recommendation system implementation, information extraction and tagging through image recognition, and introduction of AI chatbot.
+- Social media integration functionality, including SNS sharing functionality and automatic posting to social media functionality.
+- Point and reward system, including setting of point acquisition rules and provision of benefits and discounts through point usage.
+- Push notification functionality, including push notification for new information and announcements.
+- Data analysis and reporting functionality, including sales and usage analysis functionality and report creation functionality.
+
+# Technology Stack:
+
+- Backend: PHP8.2
+- Database: CockroachDB cloud
+- Storage: Amazon S3
+- Blockchain: Ethereum
+- Video streaming: Amazon IVS
+- API design: RESTful API
+- Frontend: React.js, Tailwind CSS
+- Containerization: Docker
+- Container orchestration: Kubernetes
+- Cloud services: AWS
+- CI/CD: GitHub Actions
+- Messenger APIs: Twilio API, Facebook Messenger API, LINE Messaging API
+- Phone API: Twilio Voice API
+
+# Design Considerations:
+
+- Business goals: Target affluent customers and provide a platform for renting and buying luxury items such as villas, airplanes, boats, and cars. Focus on villas to achieve sales targets and market share. Expand the service to include items such as watches, fashion items, and appliances.
+- Target users: Affluent customers and those interested in luxury items.
+- Service description: A platform centered around villas for renting and buying luxury items such as cars, airplanes, and boats. Frequently used features are placed in easily accessible locations, with a focus on smartphone operability.
+- Color scheme: Base Green (#4CAF50), Dark Green (#388E3C), Light Green (#C8E6C9), Sub Color (Blue) (#2196F3), Background Color (Off White) (#FAFAFA), Text Color (Dark Grey) (#424242).
+- Typography: Font Family (Noto Sans), Main Body Text (18px), Subtitles (24px), Titles (48px), Navigation Bar Text (16px).
+- Layout: Simple and clean design, responsive design, focus on usability and operability.
+- Navigation: Clear and easy-to-use navigation bar, utilizing modal windows and drawer menus.
+- Imagery: High-quality images, incorporating parallax effects and smooth animations.
+- Accessibility: Implement read-aloud functionality and multi-language support, following accessibility guidelines.
+- Animation and effects: Prioritize execution speed and use minimal animations, applying stress-relieving animations where appropriate.
+- Security: Enhance security using AI and decentralized identity (DID).
+- SEO: Follow SEO best practices to optimize the site for search engines, setting appropriate title tags, meta descriptions, keywords, and URL structures.
+- Domain: enabler.fun
+
+# Output Rule
+- Please do not use integrity for CSS and JavaScript
+
+# Database
+{database}
+
+# Reference for DB operation
+$DB = DB();
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+# Instruction
+Create 404.php
+
+# Output File
+{output}
+CREATE TABLE users (
+  user_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  username VARCHAR(255) UNIQUE NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z]{2,}$'),
+  password_hash VARCHAR(255) NOT NULL,
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
+  phone_number VARCHAR(15) CHECK (phone_number ~* '^\+?[1-9]\d{1,14}$'),
+  profile_image_url VARCHAR(255),
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE roles (
+  role_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  role_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE user_role (
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  role_id UUID REFERENCES roles(role_id),
+  PRIMARY KEY (user_id, role_id)
+);
+
+CREATE TABLE permissions (
+  permission_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  permission_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE role_permission (
+  role_id UUID REFERENCES roles(role_id),
+  permission_id UUID REFERENCES permissions(permission_id),
+  PRIMARY KEY (role_id, permission_id)
+);
+
+CREATE TABLE currencies (
+  currency_code CHAR(3) PRIMARY KEY,
+  conversion_rate DECIMAL(18, 6) NOT NULL
+);
+
+CREATE TABLE addresses (
+  address_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  street VARCHAR(255),
+  city VARCHAR(255),
+  state VARCHAR(255),
+  zip_code VARCHAR(10),
+  country VARCHAR(255)
+);
+
+ALTER TABLE users ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE real_estate_types (
+  real_estate_type_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  type_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE real_estates (
+  real_estate_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  real_estate_type_id UUID REFERENCES real_estate_types(real_estate_type_id),
+  address_id UUID REFERENCES addresses(address_id),
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE real_estates ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE reservations (
+  reservation_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  real_estate_id UUID REFERENCES real_estates(real_estate_id),
+  start_date TIMESTAMPTZ NOT NULL,
+  end_date TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE brands (
+  brand_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  brand_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE items (
+  item_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  category_id UUID REFERENCES categories(category_id),
+  brand_id UUID REFERENCES brands(brand_id),
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE items ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE digital_assets (
+  asset_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE digital_assets ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE purchases (
+  purchase_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  CHECK (item_id IS NOT NULL OR digital_asset_id IS NOT NULL),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE live_commerces (
+  live_commerce_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE inventories (
+  inventory_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  quantity INTEGER NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE auctions (
+  auction_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  starting_price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+ALTER TABLE auctions ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE bids (
+  bid_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  auction_id UUID REFERENCES auctions(auction_id),
+  bid_amount DECIMAL(10, 2) NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE streaming_sessions (
+  session_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE donations (
+  donation_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  streaming_session_id UUID REFERENCES streaming_sessions(session_id),
+  amount DECIMAL(10, 2) NOT NULL,
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE donations ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE cookies (
+  cookie_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  cookie_key VARCHAR(255) NOT NULL,
+  cookie_value VARCHAR(255) NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+# Reference for DB operation
+$DB = DB();
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+# Instruction
+Create 404.php
+
+# Output File
+{output}
+
+```php
+<?php
+// 404.php
+
+header("HTTP/1.0 404 Not Found");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css" integrity="sha512-5tC0yAaG+plzL1MqRl5DPTzdiF7UfME/+Rb/J0TlSxFdiQ8eD6Gqd7p6KJ7eCU3GgZ9Nb6Hl3DaiSK5D5vT/qw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-20">
+        <div class="text-center">
+            <h1 class="text-6xl font-bold text-gray-800">404</h1>
+            <p class="text-2xl text-gray-600">Page Not Found</p>
+            <p class="mt-4 text-gray-500">The page you are looking for does not exist or has been moved.</p>
+            <a href="/" class="mt-6 inline-block bg-green-500 text-white px-6 py-2 rounded-md">Go Home</a>
+        </div>
+    </div>
+</body>
+</html>
+```
+
+> 2023/05/12 06:56:13
+===================================
+
+user:User Request
+Create index.php
+
+
+Please select the required documents to answer from the list below.
+
+/home/runner/WebMagic/public/ai/prompt/:
+database_all.txt
+index.txt
+
+
+Txt(Comma sepalated)=
+
+index.txt, database_all.txt
+
+> 2023/05/12 06:57:14
+===================================
+
+user:# Project Overview:
+
+Enabler is a global marketplace for renting, buying, and selling high-end assets such as homes, villas, cars, boats, and airplanes. Initially focusing on luxury assets, we will implement a secure payment system and a rating and review system to ensure reliability. We will also develop an easy-to-use UI/UX design and mobile app, and provide a rapid customer support system. We will pay close attention to legal regulations and permits, and aim to spread our brand around the world with an effective marketing strategy. Our slogan is "SWAP YOUR Luxury" to provide a rich lifestyle. This project aims to develop a comprehensive platform for user authentication, profile management, property and item management, reservation and purchase functionality, live commerce, auction management, streaming, role-based access control, inventory management, blockchain technology, multi-channel support, digital item management, machine learning and AI utilization, social media integration, point and reward system, push notification functionality, and data analysis and reporting.
+
+# Requirements:
+
+- User authentication and profile management, including user registration, login, logout functionality, profile information editing functionality, and password reset functionality.
+- Property and item management, reservation functionality, and purchase functionality, including property and item registration, editing, deletion functionality, property and item search, filtering, sorting functionality, and reservation and purchase functionality.
+- User review and rating functionality.
+- Live commerce management, reservation functionality, and purchase functionality, including live commerce scheduling management functionality, live commerce viewing, chat participation functionality, and live commerce product purchasing functionality.
+- Auction management, bidding functionality, acceptance, and purchase functionality, including auction registration, editing, deletion functionality, bidding functionality, and auction acceptance and purchase functionality.
+- Streaming functionality and tipping functionality, including streaming scheduling management functionality, streaming viewing, chat participation functionality, and tipping functionality.
+- Role-based access control, including role definition for administrators, operators, and users, and setting access permissions for each role.
+- Inventory management functionality, including inventory registration, editing, deletion functionality, and inventory search, filtering, and sorting functionality.
+- Blockchain technology, including blockchainization of transactions and implementation of smart contracts.
+- Multi-channel support: web, all messenger apps, phone, including web application implementation, integration with messenger apps (Slack, Chatwork, Instagram, etc.), and phone API-based calling functionality.
+- Site requirements: responsive design, accessibility support, security measures, multi-language support, and SEO optimization.
+- Digital item management, purchase functionality, and auction functionality, including digital item registration, editing, deletion functionality, digital item search, filtering, sorting functionality, digital item purchase functionality, digital item auction listing, bidding, acceptance functionality, and blockchain-based transaction of digital items (NFTization).
+- Utilization of machine learning and AI, including recommendation system implementation, information extraction and tagging through image recognition, and introduction of AI chatbot.
+- Social media integration functionality, including SNS sharing functionality and automatic posting to social media functionality.
+- Point and reward system, including setting of point acquisition rules and provision of benefits and discounts through point usage.
+- Push notification functionality, including push notification for new information and announcements.
+- Data analysis and reporting functionality, including sales and usage analysis functionality and report creation functionality.
+
+# Technology Stack:
+
+- Backend: PHP8.2
+- Database: CockroachDB cloud
+- Storage: Amazon S3
+- Blockchain: Ethereum
+- Video streaming: Amazon IVS
+- API design: RESTful API
+- Frontend: React.js, Tailwind CSS
+- Containerization: Docker
+- Container orchestration: Kubernetes
+- Cloud services: AWS
+- CI/CD: GitHub Actions
+- Messenger APIs: Twilio API, Facebook Messenger API, LINE Messaging API
+- Phone API: Twilio Voice API
+
+# Design Considerations:
+
+- Business goals: Target affluent customers and provide a platform for renting and buying luxury items such as villas, airplanes, boats, and cars. Focus on villas to achieve sales targets and market share. Expand the service to include items such as watches, fashion items, and appliances.
+- Target users: Affluent customers and those interested in luxury items.
+- Service description: A platform centered around villas for renting and buying luxury items such as cars, airplanes, and boats. Frequently used features are placed in easily accessible locations, with a focus on smartphone operability.
+- Color scheme: Base Green (#4CAF50), Dark Green (#388E3C), Light Green (#C8E6C9), Sub Color (Blue) (#2196F3), Background Color (Off White) (#FAFAFA), Text Color (Dark Grey) (#424242).
+- Typography: Font Family (Noto Sans), Main Body Text (18px), Subtitles (24px), Titles (48px), Navigation Bar Text (16px).
+- Layout: Simple and clean design, responsive design, focus on usability and operability.
+- Navigation: Clear and easy-to-use navigation bar, utilizing modal windows and drawer menus.
+- Imagery: High-quality images, incorporating parallax effects and smooth animations.
+- Accessibility: Implement read-aloud functionality and multi-language support, following accessibility guidelines.
+- Animation and effects: Prioritize execution speed and use minimal animations, applying stress-relieving animations where appropriate.
+- Security: Enhance security using AI and decentralized identity (DID).
+- SEO: Follow SEO best practices to optimize the site for search engines, setting appropriate title tags, meta descriptions, keywords, and URL structures.
+- Domain: enabler.fun
+
+# Output Rule
+- Please do not use integrity for CSS and JavaScript
+
+# Database
+CREATE TABLE users (
+  user_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  username VARCHAR(255) UNIQUE NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z]{2,}$'),
+  password_hash VARCHAR(255) NOT NULL,
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
+  phone_number VARCHAR(15) CHECK (phone_number ~* '^\+?[1-9]\d{1,14}$'),
+  profile_image_url VARCHAR(255),
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE roles (
+  role_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  role_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE user_role (
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  role_id UUID REFERENCES roles(role_id),
+  PRIMARY KEY (user_id, role_id)
+);
+
+CREATE TABLE permissions (
+  permission_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  permission_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE role_permission (
+  role_id UUID REFERENCES roles(role_id),
+  permission_id UUID REFERENCES permissions(permission_id),
+  PRIMARY KEY (role_id, permission_id)
+);
+
+CREATE TABLE currencies (
+  currency_code CHAR(3) PRIMARY KEY,
+  conversion_rate DECIMAL(18, 6) NOT NULL
+);
+
+CREATE TABLE addresses (
+  address_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  street VARCHAR(255),
+  city VARCHAR(255),
+  state VARCHAR(255),
+  zip_code VARCHAR(10),
+  country VARCHAR(255)
+);
+
+ALTER TABLE users ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE real_estate_types (
+  real_estate_type_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  type_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE real_estates (
+  real_estate_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  real_estate_type_id UUID REFERENCES real_estate_types(real_estate_type_id),
+  address_id UUID REFERENCES addresses(address_id),
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE real_estates ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE reservations (
+  reservation_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  real_estate_id UUID REFERENCES real_estates(real_estate_id),
+  start_date TIMESTAMPTZ NOT NULL,
+  end_date TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE brands (
+  brand_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  brand_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE items (
+  item_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  category_id UUID REFERENCES categories(category_id),
+  brand_id UUID REFERENCES brands(brand_id),
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE items ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE digital_assets (
+  asset_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE digital_assets ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE purchases (
+  purchase_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  CHECK (item_id IS NOT NULL OR digital_asset_id IS NOT NULL),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE live_commerces (
+  live_commerce_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE inventories (
+  inventory_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  quantity INTEGER NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE auctions (
+  auction_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  starting_price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+ALTER TABLE auctions ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE bids (
+  bid_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  auction_id UUID REFERENCES auctions(auction_id),
+  bid_amount DECIMAL(10, 2) NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE streaming_sessions (
+  session_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE donations (
+  donation_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  streaming_session_id UUID REFERENCES streaming_sessions(session_id),
+  amount DECIMAL(10, 2) NOT NULL,
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE donations ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE cookies (
+  cookie_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  cookie_key VARCHAR(255) NOT NULL,
+  cookie_value VARCHAR(255) NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+# Reference for DB operation
+$DB = DB();
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+# Instruction
+Create index.php
+
+
+# Output File
+{output}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enabler - Swap Your Luxury</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class App extends React.Component {
+            render() {
+                return (
+                    <div className="container mx-auto px-4">
+                        <header className="py-5">
+                            <h1 className="text-4xl font-bold">Enabler - Swap Your Luxury</h1>
+                        </header>
+                        <main>
+                            <p>Welcome to Enabler, a global marketplace for renting, buying, and selling high-end assets such as homes, villas, cars, boats, and airplanes.</p>
+                        </main>
+                    </div>
+                );
+            }
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
+
+> 2023/05/12 06:58:45
+===================================
+
+user:User Request
+Create index.php
+
+
+
+
+Please select the required documents to answer from the list below.
+
+/home/runner/WebMagic/public/ai/prompt/:
+database_all.txt
+index.txt
+
+
+Txt(Comma sepalated)=
+
+index.txt
+
+> 2023/05/12 07:00:58
+===================================
+
+user:# Project Overview:
+
+Enabler is a global marketplace for renting, buying, and selling high-end assets such as homes, villas, cars, boats, and airplanes. Initially focusing on luxury assets, we will implement a secure payment system and a rating and review system to ensure reliability. We will also develop an easy-to-use UI/UX design and mobile app, and provide a rapid customer support system. We will pay close attention to legal regulations and permits, and aim to spread our brand around the world with an effective marketing strategy. Our slogan is "SWAP YOUR Luxury" to provide a rich lifestyle. This project aims to develop a comprehensive platform for user authentication, profile management, property and item management, reservation and purchase functionality, live commerce, auction management, streaming, role-based access control, inventory management, blockchain technology, multi-channel support, digital item management, machine learning and AI utilization, social media integration, point and reward system, push notification functionality, and data analysis and reporting.
+
+# Requirements:
+
+- User authentication and profile management, including user registration, login, logout functionality, profile information editing functionality, and password reset functionality.
+- Property and item management, reservation functionality, and purchase functionality, including property and item registration, editing, deletion functionality, property and item search, filtering, sorting functionality, and reservation and purchase functionality.
+- User review and rating functionality.
+- Live commerce management, reservation functionality, and purchase functionality, including live commerce scheduling management functionality, live commerce viewing, chat participation functionality, and live commerce product purchasing functionality.
+- Auction management, bidding functionality, acceptance, and purchase functionality, including auction registration, editing, deletion functionality, bidding functionality, and auction acceptance and purchase functionality.
+- Streaming functionality and tipping functionality, including streaming scheduling management functionality, streaming viewing, chat participation functionality, and tipping functionality.
+- Role-based access control, including role definition for administrators, operators, and users, and setting access permissions for each role.
+- Inventory management functionality, including inventory registration, editing, deletion functionality, and inventory search, filtering, and sorting functionality.
+- Blockchain technology, including blockchainization of transactions and implementation of smart contracts.
+- Multi-channel support: web, all messenger apps, phone, including web application implementation, integration with messenger apps (Slack, Chatwork, Instagram, etc.), and phone API-based calling functionality.
+- Site requirements: responsive design, accessibility support, security measures, multi-language support, and SEO optimization.
+- Digital item management, purchase functionality, and auction functionality, including digital item registration, editing, deletion functionality, digital item search, filtering, sorting functionality, digital item purchase functionality, digital item auction listing, bidding, acceptance functionality, and blockchain-based transaction of digital items (NFTization).
+- Utilization of machine learning and AI, including recommendation system implementation, information extraction and tagging through image recognition, and introduction of AI chatbot.
+- Social media integration functionality, including SNS sharing functionality and automatic posting to social media functionality.
+- Point and reward system, including setting of point acquisition rules and provision of benefits and discounts through point usage.
+- Push notification functionality, including push notification for new information and announcements.
+- Data analysis and reporting functionality, including sales and usage analysis functionality and report creation functionality.
+
+# Technology Stack:
+
+- Backend: PHP8.2
+- Database: CockroachDB cloud
+- Storage: Amazon S3
+- Blockchain: Ethereum
+- Video streaming: Amazon IVS
+- API design: RESTful API
+- Frontend: React.js, Tailwind CSS
+- Containerization: Docker
+- Container orchestration: Kubernetes
+- Cloud services: AWS
+- CI/CD: GitHub Actions
+- Messenger APIs: Twilio API, Facebook Messenger API, LINE Messaging API
+- Phone API: Twilio Voice API
+
+# Design Considerations:
+
+- Business goals: Target affluent customers and provide a platform for renting and buying luxury items such as villas, airplanes, boats, and cars. Focus on villas to achieve sales targets and market share. Expand the service to include items such as watches, fashion items, and appliances.
+- Target users: Affluent customers and those interested in luxury items.
+- Service description: A platform centered around villas for renting and buying luxury items such as cars, airplanes, and boats. Frequently used features are placed in easily accessible locations, with a focus on smartphone operability.
+- Color scheme: Base Green (#4CAF50), Dark Green (#388E3C), Light Green (#C8E6C9), Sub Color (Blue) (#2196F3), Background Color (Off White) (#FAFAFA), Text Color (Dark Grey) (#424242).
+- Typography: Font Family (Noto Sans), Main Body Text (18px), Subtitles (24px), Titles (48px), Navigation Bar Text (16px).
+- Layout: Simple and clean design, responsive design, focus on usability and operability.
+- Navigation: Clear and easy-to-use navigation bar, utilizing modal windows and drawer menus.
+- Imagery: High-quality images, incorporating parallax effects and smooth animations.
+- Accessibility: Implement read-aloud functionality and multi-language support, following accessibility guidelines.
+- Animation and effects: Prioritize execution speed and use minimal animations, applying stress-relieving animations where appropriate.
+- Security: Enhance security using AI and decentralized identity (DID).
+- SEO: Follow SEO best practices to optimize the site for search engines, setting appropriate title tags, meta descriptions, keywords, and URL structures.
+- Domain: enabler.fun
+
+# Output Rule
+- Please do not use integrity for CSS and JavaScript
+
+# Database
+
+
+# Reference for DB operation
+$DB = DB();
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+# Instruction
+Create index.php
+
+
+
+
+# Output File
+{output}
+
+```php
+<?php
+// Include database configuration
+require_once 'config.php';
+
+// Connect to the database
+try {
+    $DB = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASS);
+    $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+
+// Fetch data from the database
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enabler - Luxury Marketplace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css" integrity="sha512-5tC0yAaG+jq6sXU6vxwU5uHRxBOqj5TNQvD6X/6l9fMwaUd2MvuKwDf3T9X1YqrDnP6eL1AQWqvK9T3T8X2Yfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-off-white text-dark-grey font-noto-sans">
+    <header class="bg-base-green py-4">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-white">Enabler</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold mb-4">Luxury Properties</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <?php foreach ($result as $property) : ?>
+                <div class="bg-white shadow-md rounded-md p-4">
+                    <img src="<?php echo $property['image_url']; ?>" alt="<?php echo $property['title']; ?>" class="w-full h-64 object-cover mb-4 rounded-md">
+                    <h3 class="text-2xl font-bold mb-2"><?php echo $property['title']; ?></h3>
+                    <p class="text-lg mb-2"><?php echo $property['location']; ?></p>
+                    <p class="text-base-green font-bold text-xl"><?php echo $property['price']; ?></p>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </main>
+
+    <footer class="bg-dark-green py-4 mt-8">
+        <div class="container mx-auto px-4">
+            <p class="text-white text-center">&copy; <?php echo date('Y'); ?> Enabler. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+```
+
+> 2023/05/12 11:04:38
+===================================
+
+user:User Request
+<?php
+
+$DB = DB();
+
+// Fetch data from the database
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enabler - Luxury Marketplace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css" integrity="sha512-5tC0yAaG+jq6sXU6vxwU5uHRxBOqj5TNQvD6X/6l9fMwaUd2MvuKwDf3T9X1YqrDnP6eL1AQWqvK9T3T8X2Yfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-off-white text-dark-grey font-noto-sans">
+    <header class="bg-base-green py-4">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-white">Enabler</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold mb-4">Luxury Properties</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <?php foreach ($result as $property) : ?>
+                <div class="bg-white shadow-md rounded-md p-4">
+                    <img src="<?php echo $property['image_url']; ?>" alt="<?php echo $property['title']; ?>" class="w-full h-64 object-cover mb-4 rounded-md">
+                    <h3 class="text-2xl font-bold mb-2"><?php echo $property['title']; ?></h3>
+                    <p class="text-lg mb-2"><?php echo $property['location']; ?></p>
+                    <p class="text-base-green font-bold text-xl"><?php echo $property['price']; ?></p>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </main>
+
+    <footer class="bg-dark-green py-4 mt-8">
+        <div class="container mx-auto px-4">
+            <p class="text-white text-center">© <?php echo date('Y'); ?> Enabler. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+Fix the error in the code abobe.
+
+SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "real_estates" does not exist
+
+Please select the required documents to answer from the list below.
+
+/home/runner/WebMagic/public/ai/prompt/:
+database_all.txt
+index.txt
+
+
+Txt(Comma sepalated)=
+
+database_all.txt, index.txt
+
+> 2023/05/12 11:04:39
+===================================
+
+user:# Project Overview:
+
+Enabler is a global marketplace for renting, buying, and selling high-end assets such as homes, villas, cars, boats, and airplanes. Initially focusing on luxury assets, we will implement a secure payment system and a rating and review system to ensure reliability. We will also develop an easy-to-use UI/UX design and mobile app, and provide a rapid customer support system. We will pay close attention to legal regulations and permits, and aim to spread our brand around the world with an effective marketing strategy. Our slogan is "SWAP YOUR Luxury" to provide a rich lifestyle. This project aims to develop a comprehensive platform for user authentication, profile management, property and item management, reservation and purchase functionality, live commerce, auction management, streaming, role-based access control, inventory management, blockchain technology, multi-channel support, digital item management, machine learning and AI utilization, social media integration, point and reward system, push notification functionality, and data analysis and reporting.
+
+# Requirements:
+
+- User authentication and profile management, including user registration, login, logout functionality, profile information editing functionality, and password reset functionality.
+- Property and item management, reservation functionality, and purchase functionality, including property and item registration, editing, deletion functionality, property and item search, filtering, sorting functionality, and reservation and purchase functionality.
+- User review and rating functionality.
+- Live commerce management, reservation functionality, and purchase functionality, including live commerce scheduling management functionality, live commerce viewing, chat participation functionality, and live commerce product purchasing functionality.
+- Auction management, bidding functionality, acceptance, and purchase functionality, including auction registration, editing, deletion functionality, bidding functionality, and auction acceptance and purchase functionality.
+- Streaming functionality and tipping functionality, including streaming scheduling management functionality, streaming viewing, chat participation functionality, and tipping functionality.
+- Role-based access control, including role definition for administrators, operators, and users, and setting access permissions for each role.
+- Inventory management functionality, including inventory registration, editing, deletion functionality, and inventory search, filtering, and sorting functionality.
+- Blockchain technology, including blockchainization of transactions and implementation of smart contracts.
+- Multi-channel support: web, all messenger apps, phone, including web application implementation, integration with messenger apps (Slack, Chatwork, Instagram, etc.), and phone API-based calling functionality.
+- Site requirements: responsive design, accessibility support, security measures, multi-language support, and SEO optimization.
+- Digital item management, purchase functionality, and auction functionality, including digital item registration, editing, deletion functionality, digital item search, filtering, sorting functionality, digital item purchase functionality, digital item auction listing, bidding, acceptance functionality, and blockchain-based transaction of digital items (NFTization).
+- Utilization of machine learning and AI, including recommendation system implementation, information extraction and tagging through image recognition, and introduction of AI chatbot.
+- Social media integration functionality, including SNS sharing functionality and automatic posting to social media functionality.
+- Point and reward system, including setting of point acquisition rules and provision of benefits and discounts through point usage.
+- Push notification functionality, including push notification for new information and announcements.
+- Data analysis and reporting functionality, including sales and usage analysis functionality and report creation functionality.
+
+# Technology Stack:
+
+- Backend: PHP8.2
+- Database: CockroachDB cloud
+- Storage: Amazon S3
+- Blockchain: Ethereum
+- Video streaming: Amazon IVS
+- API design: RESTful API
+- Frontend: React.js, Tailwind CSS
+- Containerization: Docker
+- Container orchestration: Kubernetes
+- Cloud services: AWS
+- CI/CD: GitHub Actions
+- Messenger APIs: Twilio API, Facebook Messenger API, LINE Messaging API
+- Phone API: Twilio Voice API
+
+# Design Considerations:
+
+- Business goals: Target affluent customers and provide a platform for renting and buying luxury items such as villas, airplanes, boats, and cars. Focus on villas to achieve sales targets and market share. Expand the service to include items such as watches, fashion items, and appliances.
+- Target users: Affluent customers and those interested in luxury items.
+- Service description: A platform centered around villas for renting and buying luxury items such as cars, airplanes, and boats. Frequently used features are placed in easily accessible locations, with a focus on smartphone operability.
+- Color scheme: Base Green (#4CAF50), Dark Green (#388E3C), Light Green (#C8E6C9), Sub Color (Blue) (#2196F3), Background Color (Off White) (#FAFAFA), Text Color (Dark Grey) (#424242).
+- Typography: Font Family (Noto Sans), Main Body Text (18px), Subtitles (24px), Titles (48px), Navigation Bar Text (16px).
+- Layout: Simple and clean design, responsive design, focus on usability and operability.
+- Navigation: Clear and easy-to-use navigation bar, utilizing modal windows and drawer menus.
+- Imagery: High-quality images, incorporating parallax effects and smooth animations.
+- Accessibility: Implement read-aloud functionality and multi-language support, following accessibility guidelines.
+- Animation and effects: Prioritize execution speed and use minimal animations, applying stress-relieving animations where appropriate.
+- Security: Enhance security using AI and decentralized identity (DID).
+- SEO: Follow SEO best practices to optimize the site for search engines, setting appropriate title tags, meta descriptions, keywords, and URL structures.
+- Domain: enabler.fun
+
+# Output Rule
+- DO NOT use integrity for CSS and JavaScript
+- DO NOT require or include any PHP Files.
+
+# Database
+CREATE TABLE users (
+  user_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  username VARCHAR(255) UNIQUE NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z]{2,}$'),
+  password_hash VARCHAR(255) NOT NULL,
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
+  phone_number VARCHAR(15) CHECK (phone_number ~* '^\+?[1-9]\d{1,14}$'),
+  profile_image_url VARCHAR(255),
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE roles (
+  role_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  role_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE user_role (
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  role_id UUID REFERENCES roles(role_id),
+  PRIMARY KEY (user_id, role_id)
+);
+
+CREATE TABLE permissions (
+  permission_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  permission_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE role_permission (
+  role_id UUID REFERENCES roles(role_id),
+  permission_id UUID REFERENCES permissions(permission_id),
+  PRIMARY KEY (role_id, permission_id)
+);
+
+CREATE TABLE currencies (
+  currency_code CHAR(3) PRIMARY KEY,
+  conversion_rate DECIMAL(18, 6) NOT NULL
+);
+
+CREATE TABLE addresses (
+  address_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  street VARCHAR(255),
+  city VARCHAR(255),
+  state VARCHAR(255),
+  zip_code VARCHAR(10),
+  country VARCHAR(255)
+);
+
+ALTER TABLE users ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE real_estate_types (
+  real_estate_type_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  type_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE real_estates (
+  real_estate_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  real_estate_type_id UUID REFERENCES real_estate_types(real_estate_type_id),
+  address_id UUID REFERENCES addresses(address_id),
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE real_estates ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE reservations (
+  reservation_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  real_estate_id UUID REFERENCES real_estates(real_estate_id),
+  start_date TIMESTAMPTZ NOT NULL,
+  end_date TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE brands (
+  brand_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  brand_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE items (
+  item_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  category_id UUID REFERENCES categories(category_id),
+  brand_id UUID REFERENCES brands(brand_id),
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE items ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE digital_assets (
+  asset_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE digital_assets ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE purchases (
+  purchase_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  CHECK (item_id IS NOT NULL OR digital_asset_id IS NOT NULL),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE live_commerces (
+  live_commerce_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE inventories (
+  inventory_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  quantity INTEGER NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE auctions (
+  auction_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  starting_price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+ALTER TABLE auctions ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE bids (
+  bid_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  auction_id UUID REFERENCES auctions(auction_id),
+  bid_amount DECIMAL(10, 2) NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE streaming_sessions (
+  session_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE donations (
+  donation_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  streaming_session_id UUID REFERENCES streaming_sessions(session_id),
+  amount DECIMAL(10, 2) NOT NULL,
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE donations ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE cookies (
+  cookie_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  cookie_key VARCHAR(255) NOT NULL,
+  cookie_value VARCHAR(255) NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+# Project Overview:
+
+Enabler is a global marketplace for renting, buying, and selling high-end assets such as homes, villas, cars, boats, and airplanes. Initially focusing on luxury assets, we will implement a secure payment system and a rating and review system to ensure reliability. We will also develop an easy-to-use UI/UX design and mobile app, and provide a rapid customer support system. We will pay close attention to legal regulations and permits, and aim to spread our brand around the world with an effective marketing strategy. Our slogan is "SWAP YOUR Luxury" to provide a rich lifestyle. This project aims to develop a comprehensive platform for user authentication, profile management, property and item management, reservation and purchase functionality, live commerce, auction management, streaming, role-based access control, inventory management, blockchain technology, multi-channel support, digital item management, machine learning and AI utilization, social media integration, point and reward system, push notification functionality, and data analysis and reporting.
+
+# Requirements:
+
+- User authentication and profile management, including user registration, login, logout functionality, profile information editing functionality, and password reset functionality.
+- Property and item management, reservation functionality, and purchase functionality, including property and item registration, editing, deletion functionality, property and item search, filtering, sorting functionality, and reservation and purchase functionality.
+- User review and rating functionality.
+- Live commerce management, reservation functionality, and purchase functionality, including live commerce scheduling management functionality, live commerce viewing, chat participation functionality, and live commerce product purchasing functionality.
+- Auction management, bidding functionality, acceptance, and purchase functionality, including auction registration, editing, deletion functionality, bidding functionality, and auction acceptance and purchase functionality.
+- Streaming functionality and tipping functionality, including streaming scheduling management functionality, streaming viewing, chat participation functionality, and tipping functionality.
+- Role-based access control, including role definition for administrators, operators, and users, and setting access permissions for each role.
+- Inventory management functionality, including inventory registration, editing, deletion functionality, and inventory search, filtering, and sorting functionality.
+- Blockchain technology, including blockchainization of transactions and implementation of smart contracts.
+- Multi-channel support: web, all messenger apps, phone, including web application implementation, integration with messenger apps (Slack, Chatwork, Instagram, etc.), and phone API-based calling functionality.
+- Site requirements: responsive design, accessibility support, security measures, multi-language support, and SEO optimization.
+- Digital item management, purchase functionality, and auction functionality, including digital item registration, editing, deletion functionality, digital item search, filtering, sorting functionality, digital item purchase functionality, digital item auction listing, bidding, acceptance functionality, and blockchain-based transaction of digital items (NFTization).
+- Utilization of machine learning and AI, including recommendation system implementation, information extraction and tagging through image recognition, and introduction of AI chatbot.
+- Social media integration functionality, including SNS sharing functionality and automatic posting to social media functionality.
+- Point and reward system, including setting of point acquisition rules and provision of benefits and discounts through point usage.
+- Push notification functionality, including push notification for new information and announcements.
+- Data analysis and reporting functionality, including sales and usage analysis functionality and report creation functionality.
+
+# Technology Stack:
+
+- Backend: PHP8.2
+- Database: CockroachDB cloud
+- Storage: Amazon S3
+- Blockchain: Ethereum
+- Video streaming: Amazon IVS
+- API design: RESTful API
+- Frontend: React.js, Tailwind CSS
+- Containerization: Docker
+- Container orchestration: Kubernetes
+- Cloud services: AWS
+- CI/CD: GitHub Actions
+- Messenger APIs: Twilio API, Facebook Messenger API, LINE Messaging API
+- Phone API: Twilio Voice API
+
+# Design Considerations:
+
+- Business goals: Target affluent customers and provide a platform for renting and buying luxury items such as villas, airplanes, boats, and cars. Focus on villas to achieve sales targets and market share. Expand the service to include items such as watches, fashion items, and appliances.
+- Target users: Affluent customers and those interested in luxury items.
+- Service description: A platform centered around villas for renting and buying luxury items such as cars, airplanes, and boats. Frequently used features are placed in easily accessible locations, with a focus on smartphone operability.
+- Color scheme: Base Green (#4CAF50), Dark Green (#388E3C), Light Green (#C8E6C9), Sub Color (Blue) (#2196F3), Background Color (Off White) (#FAFAFA), Text Color (Dark Grey) (#424242).
+- Typography: Font Family (Noto Sans), Main Body Text (18px), Subtitles (24px), Titles (48px), Navigation Bar Text (16px).
+- Layout: Simple and clean design, responsive design, focus on usability and operability.
+- Navigation: Clear and easy-to-use navigation bar, utilizing modal windows and drawer menus.
+- Imagery: High-quality images, incorporating parallax effects and smooth animations.
+- Accessibility: Implement read-aloud functionality and multi-language support, following accessibility guidelines.
+- Animation and effects: Prioritize execution speed and use minimal animations, applying stress-relieving animations where appropriate.
+- Security: Enhance security using AI and decentralized identity (DID).
+- SEO: Follow SEO best practices to optimize the site for search engines, setting appropriate title tags, meta descriptions, keywords, and URL structures.
+- Domain: enabler.fun
+
+# Output Rule
+- DO NOT use integrity for CSS and JavaScript
+- DO NOT require or include any PHP Files.
+
+# Database
+{database}
+
+# Reference for DB operation
+$DB = DB();//CockroachDB
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+# Instruction
+<?php
+
+$DB = DB();
+
+// Fetch data from the database
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enabler - Luxury Marketplace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css" integrity="sha512-5tC0yAaG+jq6sXU6vxwU5uHRxBOqj5TNQvD6X/6l9fMwaUd2MvuKwDf3T9X1YqrDnP6eL1AQWqvK9T3T8X2Yfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-off-white text-dark-grey font-noto-sans">
+    <header class="bg-base-green py-4">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-white">Enabler</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold mb-4">Luxury Properties</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <?php foreach ($result as $property) : ?>
+                <div class="bg-white shadow-md rounded-md p-4">
+                    <img src="<?php echo $property['image_url']; ?>" alt="<?php echo $property['title']; ?>" class="w-full h-64 object-cover mb-4 rounded-md">
+                    <h3 class="text-2xl font-bold mb-2"><?php echo $property['title']; ?></h3>
+                    <p class="text-lg mb-2"><?php echo $property['location']; ?></p>
+                    <p class="text-base-green font-bold text-xl"><?php echo $property['price']; ?></p>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </main>
+
+    <footer class="bg-dark-green py-4 mt-8">
+        <div class="container mx-auto px-4">
+            <p class="text-white text-center">© <?php echo date('Y'); ?> Enabler. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+Fix the error in the code abobe.
+
+SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "real_estates" does not exist
+
+# Output File
+{output}
+
+
+# Reference for DB operation
+$DB = DB();//CockroachDB
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+# Instruction
+<?php
+
+$DB = DB();
+
+// Fetch data from the database
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enabler - Luxury Marketplace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css" integrity="sha512-5tC0yAaG+jq6sXU6vxwU5uHRxBOqj5TNQvD6X/6l9fMwaUd2MvuKwDf3T9X1YqrDnP6eL1AQWqvK9T3T8X2Yfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-off-white text-dark-grey font-noto-sans">
+    <header class="bg-base-green py-4">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-white">Enabler</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold mb-4">Luxury Properties</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <?php foreach ($result as $property) : ?>
+                <div class="bg-white shadow-md rounded-md p-4">
+                    <img src="<?php echo $property['image_url']; ?>" alt="<?php echo $property['title']; ?>" class="w-full h-64 object-cover mb-4 rounded-md">
+                    <h3 class="text-2xl font-bold mb-2"><?php echo $property['title']; ?></h3>
+                    <p class="text-lg mb-2"><?php echo $property['location']; ?></p>
+                    <p class="text-base-green font-bold text-xl"><?php echo $property['price']; ?></p>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </main>
+
+    <footer class="bg-dark-green py-4 mt-8">
+        <div class="container mx-auto px-4">
+            <p class="text-white text-center">© <?php echo date('Y'); ?> Enabler. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+Fix the error in the code abobe.
+
+SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "real_estates" does not exist
+
+# Output File
+{output}
+
+
+
+> 2023/05/12 11:18:26
+===================================
+
+user:# Project Overview:
+
+Enabler is a global marketplace for renting, buying, and selling high-end assets such as homes, villas, cars, boats, and airplanes. Initially focusing on luxury assets, we will implement a secure payment system and a rating and review system to ensure reliability. We will also develop an easy-to-use UI/UX design and mobile app, and provide a rapid customer support system. We will pay close attention to legal regulations and permits, and aim to spread our brand around the world with an effective marketing strategy. Our slogan is "SWAP YOUR Luxury" to provide a rich lifestyle. This project aims to develop a comprehensive platform for user authentication, profile management, property and item management, reservation and purchase functionality, live commerce, auction management, streaming, role-based access control, inventory management, blockchain technology, multi-channel support, digital item management, machine learning and AI utilization, social media integration, point and reward system, push notification functionality, and data analysis and reporting.
+
+# Requirements:
+
+- User authentication and profile management, including user registration, login, logout functionality, profile information editing functionality, and password reset functionality.
+- Property and item management, reservation functionality, and purchase functionality, including property and item registration, editing, deletion functionality, property and item search, filtering, sorting functionality, and reservation and purchase functionality.
+- User review and rating functionality.
+- Live commerce management, reservation functionality, and purchase functionality, including live commerce scheduling management functionality, live commerce viewing, chat participation functionality, and live commerce product purchasing functionality.
+- Auction management, bidding functionality, acceptance, and purchase functionality, including auction registration, editing, deletion functionality, bidding functionality, and auction acceptance and purchase functionality.
+- Streaming functionality and tipping functionality, including streaming scheduling management functionality, streaming viewing, chat participation functionality, and tipping functionality.
+- Role-based access control, including role definition for administrators, operators, and users, and setting access permissions for each role.
+- Inventory management functionality, including inventory registration, editing, deletion functionality, and inventory search, filtering, and sorting functionality.
+- Blockchain technology, including blockchainization of transactions and implementation of smart contracts.
+- Multi-channel support: web, all messenger apps, phone, including web application implementation, integration with messenger apps (Slack, Chatwork, Instagram, etc.), and phone API-based calling functionality.
+- Site requirements: responsive design, accessibility support, security measures, multi-language support, and SEO optimization.
+- Digital item management, purchase functionality, and auction functionality, including digital item registration, editing, deletion functionality, digital item search, filtering, sorting functionality, digital item purchase functionality, digital item auction listing, bidding, acceptance functionality, and blockchain-based transaction of digital items (NFTization).
+- Utilization of machine learning and AI, including recommendation system implementation, information extraction and tagging through image recognition, and introduction of AI chatbot.
+- Social media integration functionality, including SNS sharing functionality and automatic posting to social media functionality.
+- Point and reward system, including setting of point acquisition rules and provision of benefits and discounts through point usage.
+- Push notification functionality, including push notification for new information and announcements.
+- Data analysis and reporting functionality, including sales and usage analysis functionality and report creation functionality.
+
+# Technology Stack:
+
+- Backend: PHP8.2
+- Database: CockroachDB cloud
+- Storage: Amazon S3
+- Blockchain: Ethereum
+- Video streaming: Amazon IVS
+- API design: RESTful API
+- Frontend: React.js, Tailwind CSS
+- Containerization: Docker
+- Container orchestration: Kubernetes
+- Cloud services: AWS
+- CI/CD: GitHub Actions
+- Messenger APIs: Twilio API, Facebook Messenger API, LINE Messaging API
+- Phone API: Twilio Voice API
+
+# Design Considerations:
+
+- Business goals: Target affluent customers and provide a platform for renting and buying luxury items such as villas, airplanes, boats, and cars. Focus on villas to achieve sales targets and market share. Expand the service to include items such as watches, fashion items, and appliances.
+- Target users: Affluent customers and those interested in luxury items.
+- Service description: A platform centered around villas for renting and buying luxury items such as cars, airplanes, and boats. Frequently used features are placed in easily accessible locations, with a focus on smartphone operability.
+- Color scheme: Base Green (#4CAF50), Dark Green (#388E3C), Light Green (#C8E6C9), Sub Color (Blue) (#2196F3), Background Color (Off White) (#FAFAFA), Text Color (Dark Grey) (#424242).
+- Typography: Font Family (Noto Sans), Main Body Text (18px), Subtitles (24px), Titles (48px), Navigation Bar Text (16px).
+- Layout: Simple and clean design, responsive design, focus on usability and operability.
+- Navigation: Clear and easy-to-use navigation bar, utilizing modal windows and drawer menus.
+- Imagery: High-quality images, incorporating parallax effects and smooth animations.
+- Accessibility: Implement read-aloud functionality and multi-language support, following accessibility guidelines.
+- Animation and effects: Prioritize execution speed and use minimal animations, applying stress-relieving animations where appropriate.
+- Security: Enhance security using AI and decentralized identity (DID).
+- SEO: Follow SEO best practices to optimize the site for search engines, setting appropriate title tags, meta descriptions, keywords, and URL structures.
+- Domain: enabler.fun
+
+# Output Rule
+- DO NOT use integrity for CSS and JavaScript
+- DO NOT require or include any PHP Files.
+
+# Database
+CREATE TABLE users (
+  user_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  username VARCHAR(255) UNIQUE NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z]{2,}$'),
+  password_hash VARCHAR(255) NOT NULL,
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
+  phone_number VARCHAR(15) CHECK (phone_number ~* '^\+?[1-9]\d{1,14}$'),
+  profile_image_url VARCHAR(255),
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE roles (
+  role_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  role_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE user_role (
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  role_id UUID REFERENCES roles(role_id),
+  PRIMARY KEY (user_id, role_id)
+);
+
+CREATE TABLE permissions (
+  permission_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  permission_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE role_permission (
+  role_id UUID REFERENCES roles(role_id),
+  permission_id UUID REFERENCES permissions(permission_id),
+  PRIMARY KEY (role_id, permission_id)
+);
+
+CREATE TABLE currencies (
+  currency_code CHAR(3) PRIMARY KEY,
+  conversion_rate DECIMAL(18, 6) NOT NULL
+);
+
+CREATE TABLE addresses (
+  address_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  street VARCHAR(255),
+  city VARCHAR(255),
+  state VARCHAR(255),
+  zip_code VARCHAR(10),
+  country VARCHAR(255)
+);
+
+ALTER TABLE users ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE real_estate_types (
+  real_estate_type_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  type_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE real_estates (
+  real_estate_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  real_estate_type_id UUID REFERENCES real_estate_types(real_estate_type_id),
+  address_id UUID REFERENCES addresses(address_id),
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE real_estates ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE reservations (
+  reservation_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  real_estate_id UUID REFERENCES real_estates(real_estate_id),
+  start_date TIMESTAMPTZ NOT NULL,
+  end_date TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE brands (
+  brand_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  brand_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE items (
+  item_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  category_id UUID REFERENCES categories(category_id),
+  brand_id UUID REFERENCES brands(brand_id),
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE items ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE digital_assets (
+  asset_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE digital_assets ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE purchases (
+  purchase_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  CHECK (item_id IS NOT NULL OR digital_asset_id IS NOT NULL),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE live_commerces (
+  live_commerce_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE inventories (
+  inventory_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  quantity INTEGER NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE auctions (
+  auction_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  starting_price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+ALTER TABLE auctions ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE bids (
+  bid_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  auction_id UUID REFERENCES auctions(auction_id),
+  bid_amount DECIMAL(10, 2) NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE streaming_sessions (
+  session_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE donations (
+  donation_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  streaming_session_id UUID REFERENCES streaming_sessions(session_id),
+  amount DECIMAL(10, 2) NOT NULL,
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE donations ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE cookies (
+  cookie_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  cookie_key VARCHAR(255) NOT NULL,
+  cookie_value VARCHAR(255) NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+# Project Overview:
+
+Enabler is a global marketplace for renting, buying, and selling high-end assets such as homes, villas, cars, boats, and airplanes. Initially focusing on luxury assets, we will implement a secure payment system and a rating and review system to ensure reliability. We will also develop an easy-to-use UI/UX design and mobile app, and provide a rapid customer support system. We will pay close attention to legal regulations and permits, and aim to spread our brand around the world with an effective marketing strategy. Our slogan is "SWAP YOUR Luxury" to provide a rich lifestyle. This project aims to develop a comprehensive platform for user authentication, profile management, property and item management, reservation and purchase functionality, live commerce, auction management, streaming, role-based access control, inventory management, blockchain technology, multi-channel support, digital item management, machine learning and AI utilization, social media integration, point and reward system, push notification functionality, and data analysis and reporting.
+
+# Requirements:
+
+- User authentication and profile management, including user registration, login, logout functionality, profile information editing functionality, and password reset functionality.
+- Property and item management, reservation functionality, and purchase functionality, including property and item registration, editing, deletion functionality, property and item search, filtering, sorting functionality, and reservation and purchase functionality.
+- User review and rating functionality.
+- Live commerce management, reservation functionality, and purchase functionality, including live commerce scheduling management functionality, live commerce viewing, chat participation functionality, and live commerce product purchasing functionality.
+- Auction management, bidding functionality, acceptance, and purchase functionality, including auction registration, editing, deletion functionality, bidding functionality, and auction acceptance and purchase functionality.
+- Streaming functionality and tipping functionality, including streaming scheduling management functionality, streaming viewing, chat participation functionality, and tipping functionality.
+- Role-based access control, including role definition for administrators, operators, and users, and setting access permissions for each role.
+- Inventory management functionality, including inventory registration, editing, deletion functionality, and inventory search, filtering, and sorting functionality.
+- Blockchain technology, including blockchainization of transactions and implementation of smart contracts.
+- Multi-channel support: web, all messenger apps, phone, including web application implementation, integration with messenger apps (Slack, Chatwork, Instagram, etc.), and phone API-based calling functionality.
+- Site requirements: responsive design, accessibility support, security measures, multi-language support, and SEO optimization.
+- Digital item management, purchase functionality, and auction functionality, including digital item registration, editing, deletion functionality, digital item search, filtering, sorting functionality, digital item purchase functionality, digital item auction listing, bidding, acceptance functionality, and blockchain-based transaction of digital items (NFTization).
+- Utilization of machine learning and AI, including recommendation system implementation, information extraction and tagging through image recognition, and introduction of AI chatbot.
+- Social media integration functionality, including SNS sharing functionality and automatic posting to social media functionality.
+- Point and reward system, including setting of point acquisition rules and provision of benefits and discounts through point usage.
+- Push notification functionality, including push notification for new information and announcements.
+- Data analysis and reporting functionality, including sales and usage analysis functionality and report creation functionality.
+
+# Technology Stack:
+
+- Backend: PHP8.2
+- Database: CockroachDB cloud
+- Storage: Amazon S3
+- Blockchain: Ethereum
+- Video streaming: Amazon IVS
+- API design: RESTful API
+- Frontend: React.js, Tailwind CSS
+- Containerization: Docker
+- Container orchestration: Kubernetes
+- Cloud services: AWS
+- CI/CD: GitHub Actions
+- Messenger APIs: Twilio API, Facebook Messenger API, LINE Messaging API
+- Phone API: Twilio Voice API
+
+# Design Considerations:
+
+- Business goals: Target affluent customers and provide a platform for renting and buying luxury items such as villas, airplanes, boats, and cars. Focus on villas to achieve sales targets and market share. Expand the service to include items such as watches, fashion items, and appliances.
+- Target users: Affluent customers and those interested in luxury items.
+- Service description: A platform centered around villas for renting and buying luxury items such as cars, airplanes, and boats. Frequently used features are placed in easily accessible locations, with a focus on smartphone operability.
+- Color scheme: Base Green (#4CAF50), Dark Green (#388E3C), Light Green (#C8E6C9), Sub Color (Blue) (#2196F3), Background Color (Off White) (#FAFAFA), Text Color (Dark Grey) (#424242).
+- Typography: Font Family (Noto Sans), Main Body Text (18px), Subtitles (24px), Titles (48px), Navigation Bar Text (16px).
+- Layout: Simple and clean design, responsive design, focus on usability and operability.
+- Navigation: Clear and easy-to-use navigation bar, utilizing modal windows and drawer menus.
+- Imagery: High-quality images, incorporating parallax effects and smooth animations.
+- Accessibility: Implement read-aloud functionality and multi-language support, following accessibility guidelines.
+- Animation and effects: Prioritize execution speed and use minimal animations, applying stress-relieving animations where appropriate.
+- Security: Enhance security using AI and decentralized identity (DID).
+- SEO: Follow SEO best practices to optimize the site for search engines, setting appropriate title tags, meta descriptions, keywords, and URL structures.
+- Domain: enabler.fun
+
+# Output Rule
+- DO NOT use integrity for CSS and JavaScript
+- DO NOT require or include any PHP Files.
+
+# Database
+{database}
+
+# Reference for DB operation
+$DB = DB();//CockroachDB
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+# Instruction
+<?php
+
+$DB = DB();
+
+// Fetch data from the database
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enabler - Luxury Marketplace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css" integrity="sha512-5tC0yAaG+jq6sXU6vxwU5uHRxBOqj5TNQvD6X/6l9fMwaUd2MvuKwDf3T9X1YqrDnP6eL1AQWqvK9T3T8X2Yfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-off-white text-dark-grey font-noto-sans">
+    <header class="bg-base-green py-4">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-white">Enabler</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold mb-4">Luxury Properties</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <?php foreach ($result as $property) : ?>
+                <div class="bg-white shadow-md rounded-md p-4">
+                    <img src="<?php echo $property['image_url']; ?>" alt="<?php echo $property['title']; ?>" class="w-full h-64 object-cover mb-4 rounded-md">
+                    <h3 class="text-2xl font-bold mb-2"><?php echo $property['title']; ?></h3>
+                    <p class="text-lg mb-2"><?php echo $property['location']; ?></p>
+                    <p class="text-base-green font-bold text-xl"><?php echo $property['price']; ?></p>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </main>
+
+    <footer class="bg-dark-green py-4 mt-8">
+        <div class="container mx-auto px-4">
+            <p class="text-white text-center">© <?php echo date('Y'); ?> Enabler. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+Fix the error in the code abobe.
+
+SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "real_estates" does not exist
+
+# Output File
+{output}
+
+
+# Reference for DB operation
+$DB = DB();//CockroachDB
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+# Instruction
+<?php
+
+$DB = DB();
+
+// Fetch data from the database
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enabler - Luxury Marketplace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css" integrity="sha512-5tC0yAaG+jq6sXU6vxwU5uHRxBOqj5TNQvD6X/6l9fMwaUd2MvuKwDf3T9X1YqrDnP6eL1AQWqvK9T3T8X2Yfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-off-white text-dark-grey font-noto-sans">
+    <header class="bg-base-green py-4">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-white">Enabler</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold mb-4">Luxury Properties</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <?php foreach ($result as $property) : ?>
+                <div class="bg-white shadow-md rounded-md p-4">
+                    <img src="<?php echo $property['image_url']; ?>" alt="<?php echo $property['title']; ?>" class="w-full h-64 object-cover mb-4 rounded-md">
+                    <h3 class="text-2xl font-bold mb-2"><?php echo $property['title']; ?></h3>
+                    <p class="text-lg mb-2"><?php echo $property['location']; ?></p>
+                    <p class="text-base-green font-bold text-xl"><?php echo $property['price']; ?></p>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </main>
+
+    <footer class="bg-dark-green py-4 mt-8">
+        <div class="container mx-auto px-4">
+            <p class="text-white text-center">© <?php echo date('Y'); ?> Enabler. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+Fix the error in the code abobe.
+
+SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "real_estates" does not exist
+
+# Output File
+{output}
+
+
+
+> 2023/05/12 11:26:33
+===================================
+
+user:# Project Overview:
+
+Enabler is a global marketplace for renting, buying, and selling high-end assets such as homes, villas, cars, boats, and airplanes. Initially focusing on luxury assets, we will implement a secure payment system and a rating and review system to ensure reliability. We will also develop an easy-to-use UI/UX design and mobile app, and provide a rapid customer support system. We will pay close attention to legal regulations and permits, and aim to spread our brand around the world with an effective marketing strategy. Our slogan is "SWAP YOUR Luxury" to provide a rich lifestyle. This project aims to develop a comprehensive platform for user authentication, profile management, property and item management, reservation and purchase functionality, live commerce, auction management, streaming, role-based access control, inventory management, blockchain technology, multi-channel support, digital item management, machine learning and AI utilization, social media integration, point and reward system, push notification functionality, and data analysis and reporting.
+
+# Requirements:
+
+- User authentication and profile management, including user registration, login, logout functionality, profile information editing functionality, and password reset functionality.
+- Property and item management, reservation functionality, and purchase functionality, including property and item registration, editing, deletion functionality, property and item search, filtering, sorting functionality, and reservation and purchase functionality.
+- User review and rating functionality.
+- Live commerce management, reservation functionality, and purchase functionality, including live commerce scheduling management functionality, live commerce viewing, chat participation functionality, and live commerce product purchasing functionality.
+- Auction management, bidding functionality, acceptance, and purchase functionality, including auction registration, editing, deletion functionality, bidding functionality, and auction acceptance and purchase functionality.
+- Streaming functionality and tipping functionality, including streaming scheduling management functionality, streaming viewing, chat participation functionality, and tipping functionality.
+- Role-based access control, including role definition for administrators, operators, and users, and setting access permissions for each role.
+- Inventory management functionality, including inventory registration, editing, deletion functionality, and inventory search, filtering, and sorting functionality.
+- Blockchain technology, including blockchainization of transactions and implementation of smart contracts.
+- Multi-channel support: web, all messenger apps, phone, including web application implementation, integration with messenger apps (Slack, Chatwork, Instagram, etc.), and phone API-based calling functionality.
+- Site requirements: responsive design, accessibility support, security measures, multi-language support, and SEO optimization.
+- Digital item management, purchase functionality, and auction functionality, including digital item registration, editing, deletion functionality, digital item search, filtering, sorting functionality, digital item purchase functionality, digital item auction listing, bidding, acceptance functionality, and blockchain-based transaction of digital items (NFTization).
+- Utilization of machine learning and AI, including recommendation system implementation, information extraction and tagging through image recognition, and introduction of AI chatbot.
+- Social media integration functionality, including SNS sharing functionality and automatic posting to social media functionality.
+- Point and reward system, including setting of point acquisition rules and provision of benefits and discounts through point usage.
+- Push notification functionality, including push notification for new information and announcements.
+- Data analysis and reporting functionality, including sales and usage analysis functionality and report creation functionality.
+
+# Technology Stack:
+
+- Backend: PHP8.2
+- Database: CockroachDB cloud
+- Storage: Amazon S3
+- Blockchain: Ethereum
+- Video streaming: Amazon IVS
+- API design: RESTful API
+- Frontend: React.js, Tailwind CSS
+- Containerization: Docker
+- Container orchestration: Kubernetes
+- Cloud services: AWS
+- CI/CD: GitHub Actions
+- Messenger APIs: Twilio API, Facebook Messenger API, LINE Messaging API
+- Phone API: Twilio Voice API
+
+# Design Considerations:
+
+- Business goals: Target affluent customers and provide a platform for renting and buying luxury items such as villas, airplanes, boats, and cars. Focus on villas to achieve sales targets and market share. Expand the service to include items such as watches, fashion items, and appliances.
+- Target users: Affluent customers and those interested in luxury items.
+- Service description: A platform centered around villas for renting and buying luxury items such as cars, airplanes, and boats. Frequently used features are placed in easily accessible locations, with a focus on smartphone operability.
+- Color scheme: Base Green (#4CAF50), Dark Green (#388E3C), Light Green (#C8E6C9), Sub Color (Blue) (#2196F3), Background Color (Off White) (#FAFAFA), Text Color (Dark Grey) (#424242).
+- Typography: Font Family (Noto Sans), Main Body Text (18px), Subtitles (24px), Titles (48px), Navigation Bar Text (16px).
+- Layout: Simple and clean design, responsive design, focus on usability and operability.
+- Navigation: Clear and easy-to-use navigation bar, utilizing modal windows and drawer menus.
+- Imagery: High-quality images, incorporating parallax effects and smooth animations.
+- Accessibility: Implement read-aloud functionality and multi-language support, following accessibility guidelines.
+- Animation and effects: Prioritize execution speed and use minimal animations, applying stress-relieving animations where appropriate.
+- Security: Enhance security using AI and decentralized identity (DID).
+- SEO: Follow SEO best practices to optimize the site for search engines, setting appropriate title tags, meta descriptions, keywords, and URL structures.
+- Domain: enabler.fun
+
+# Output Rule
+- DO NOT use integrity for CSS and JavaScript
+- DO NOT require or include any PHP Files.
+
+# Database
+CREATE TABLE users (
+  user_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  username VARCHAR(255) UNIQUE NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z]{2,}$'),
+  password_hash VARCHAR(255) NOT NULL,
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
+  phone_number VARCHAR(15) CHECK (phone_number ~* '^\+?[1-9]\d{1,14}$'),
+  profile_image_url VARCHAR(255),
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE roles (
+  role_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  role_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE user_role (
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  role_id UUID REFERENCES roles(role_id),
+  PRIMARY KEY (user_id, role_id)
+);
+
+CREATE TABLE permissions (
+  permission_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  permission_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE role_permission (
+  role_id UUID REFERENCES roles(role_id),
+  permission_id UUID REFERENCES permissions(permission_id),
+  PRIMARY KEY (role_id, permission_id)
+);
+
+CREATE TABLE currencies (
+  currency_code CHAR(3) PRIMARY KEY,
+  conversion_rate DECIMAL(18, 6) NOT NULL
+);
+
+CREATE TABLE addresses (
+  address_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  street VARCHAR(255),
+  city VARCHAR(255),
+  state VARCHAR(255),
+  zip_code VARCHAR(10),
+  country VARCHAR(255)
+);
+
+ALTER TABLE users ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE real_estate_types (
+  real_estate_type_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  type_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE real_estates (
+  real_estate_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  real_estate_type_id UUID REFERENCES real_estate_types(real_estate_type_id),
+  address_id UUID REFERENCES addresses(address_id),
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE real_estates ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE reservations (
+  reservation_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  real_estate_id UUID REFERENCES real_estates(real_estate_id),
+  start_date TIMESTAMPTZ NOT NULL,
+  end_date TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE brands (
+  brand_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  brand_name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE items (
+  item_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  category_id UUID REFERENCES categories(category_id),
+  brand_id UUID REFERENCES brands(brand_id),
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE items ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE digital_assets (
+  asset_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE digital_assets ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE purchases (
+  purchase_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  CHECK (item_id IS NOT NULL OR digital_asset_id IS NOT NULL),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE live_commerces (
+  live_commerce_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE inventories (
+  inventory_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  quantity INTEGER NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE auctions (
+  auction_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  item_id UUID REFERENCES items(item_id),
+  digital_asset_id UUID REFERENCES digital_assets(asset_id),
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  starting_price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+ALTER TABLE auctions ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE bids (
+  bid_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  auction_id UUID REFERENCES auctions(auction_id),
+  bid_amount DECIMAL(10, 2) NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE streaming_sessions (
+  session_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE donations (
+  donation_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  streaming_session_id UUID REFERENCES streaming_sessions(session_id),
+  amount DECIMAL(10, 2) NOT NULL,
+  currency_code CHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE donations ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+
+CREATE TABLE cookies (
+  cookie_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  cookie_key VARCHAR(255) NOT NULL,
+  cookie_value VARCHAR(255) NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+# Reference for DB operation
+$DB = DB();//CockroachDB
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+# Instruction
+<?php
+
+$DB = DB();
+
+// Fetch data from the database
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enabler - Luxury Marketplace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css" integrity="sha512-5tC0yAaG+jq6sXU6vxwU5uHRxBOqj5TNQvD6X/6l9fMwaUd2MvuKwDf3T9X1YqrDnP6eL1AQWqvK9T3T8X2Yfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-off-white text-dark-grey font-noto-sans">
+    <header class="bg-base-green py-4">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-white">Enabler</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold mb-4">Luxury Properties</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <?php foreach ($result as $property) : ?>
+                <div class="bg-white shadow-md rounded-md p-4">
+                    <img src="<?php echo $property['image_url']; ?>" alt="<?php echo $property['title']; ?>" class="w-full h-64 object-cover mb-4 rounded-md">
+                    <h3 class="text-2xl font-bold mb-2"><?php echo $property['title']; ?></h3>
+                    <p class="text-lg mb-2"><?php echo $property['location']; ?></p>
+                    <p class="text-base-green font-bold text-xl"><?php echo $property['price']; ?></p>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </main>
+
+    <footer class="bg-dark-green py-4 mt-8">
+        <div class="container mx-auto px-4">
+            <p class="text-white text-center">© <?php echo date('Y'); ?> Enabler. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+Fix the error in the code abobe.
+
+SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "real_estates" does not exist
+
+# Output File
+{output}
+
+It seems like the "real_estates" table does not exist in your database. Please make sure you have created the table before running the query. You can create the table using the following SQL query:
+
+```sql
+CREATE TABLE real_estates (
+  real_estate_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+  real_estate_type_id UUID REFERENCES real_estate_types(real_estate_type_id),
+  address_id UUID REFERENCES addresses(address_id),
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2),
+  currency_code CHAR(3),
+  image_url VARCHAR(255),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE real_estates ADD FOREIGN KEY (currency_code) REFERENCES currencies(currency_code);
+```
+
+After creating the table, you can run the PHP code again, and it should work without any errors.
+
+> 2023/05/12 12:02:08
+===================================
+
+user:User Request
+Create index.php
+
+適当なページを作成して適当にURLをリンクしてください
+
+Please select the required documents to answer from the list below.
+
+/home/runner/WebMagic/public/ai/prompt/:
+database_all.txt
+index.txt
+
+
+Txt(Comma sepalated)=
+
+index.txt
+
+> 2023/05/12 12:05:19
+===================================
+
+user:# Project Overview:
+
+Enabler is a global marketplace for renting, buying, and selling high-end assets such as homes, villas, cars, boats, and airplanes. Initially focusing on luxury assets, we will implement a secure payment system and a rating and review system to ensure reliability. We will also develop an easy-to-use UI/UX design and mobile app, and provide a rapid customer support system. We will pay close attention to legal regulations and permits, and aim to spread our brand around the world with an effective marketing strategy. Our slogan is "SWAP YOUR Luxury" to provide a rich lifestyle. This project aims to develop a comprehensive platform for user authentication, profile management, property and item management, reservation and purchase functionality, live commerce, auction management, streaming, role-based access control, inventory management, blockchain technology, multi-channel support, digital item management, machine learning and AI utilization, social media integration, point and reward system, push notification functionality, and data analysis and reporting.
+
+# Requirements:
+
+- User authentication and profile management, including user registration, login, logout functionality, profile information editing functionality, and password reset functionality.
+- Property and item management, reservation functionality, and purchase functionality, including property and item registration, editing, deletion functionality, property and item search, filtering, sorting functionality, and reservation and purchase functionality.
+- User review and rating functionality.
+- Live commerce management, reservation functionality, and purchase functionality, including live commerce scheduling management functionality, live commerce viewing, chat participation functionality, and live commerce product purchasing functionality.
+- Auction management, bidding functionality, acceptance, and purchase functionality, including auction registration, editing, deletion functionality, bidding functionality, and auction acceptance and purchase functionality.
+- Streaming functionality and tipping functionality, including streaming scheduling management functionality, streaming viewing, chat participation functionality, and tipping functionality.
+- Role-based access control, including role definition for administrators, operators, and users, and setting access permissions for each role.
+- Inventory management functionality, including inventory registration, editing, deletion functionality, and inventory search, filtering, and sorting functionality.
+- Blockchain technology, including blockchainization of transactions and implementation of smart contracts.
+- Multi-channel support: web, all messenger apps, phone, including web application implementation, integration with messenger apps (Slack, Chatwork, Instagram, etc.), and phone API-based calling functionality.
+- Site requirements: responsive design, accessibility support, security measures, multi-language support, and SEO optimization.
+- Digital item management, purchase functionality, and auction functionality, including digital item registration, editing, deletion functionality, digital item search, filtering, sorting functionality, digital item purchase functionality, digital item auction listing, bidding, acceptance functionality, and blockchain-based transaction of digital items (NFTization).
+- Utilization of machine learning and AI, including recommendation system implementation, information extraction and tagging through image recognition, and introduction of AI chatbot.
+- Social media integration functionality, including SNS sharing functionality and automatic posting to social media functionality.
+- Point and reward system, including setting of point acquisition rules and provision of benefits and discounts through point usage.
+- Push notification functionality, including push notification for new information and announcements.
+- Data analysis and reporting functionality, including sales and usage analysis functionality and report creation functionality.
+
+# Technology Stack:
+
+- Backend: PHP8.2
+- Database: CockroachDB cloud
+- Storage: Amazon S3
+- Blockchain: Ethereum
+- Video streaming: Amazon IVS
+- API design: RESTful API
+- Frontend: React.js, Tailwind CSS
+- Containerization: Docker
+- Container orchestration: Kubernetes
+- Cloud services: AWS
+- CI/CD: GitHub Actions
+- Messenger APIs: Twilio API, Facebook Messenger API, LINE Messaging API
+- Phone API: Twilio Voice API
+
+# Design Considerations:
+
+- Business goals: Target affluent customers and provide a platform for renting and buying luxury items such as villas, airplanes, boats, and cars. Focus on villas to achieve sales targets and market share. Expand the service to include items such as watches, fashion items, and appliances.
+- Target users: Affluent customers and those interested in luxury items.
+- Service description: A platform centered around villas for renting and buying luxury items such as cars, airplanes, and boats. Frequently used features are placed in easily accessible locations, with a focus on smartphone operability.
+- Color scheme: Base Green (#4CAF50), Dark Green (#388E3C), Light Green (#C8E6C9), Sub Color (Blue) (#2196F3), Background Color (Off White) (#FAFAFA), Text Color (Dark Grey) (#424242).
+- Typography: Font Family (Noto Sans), Main Body Text (18px), Subtitles (24px), Titles (48px), Navigation Bar Text (16px).
+- Layout: Simple and clean design, responsive design, focus on usability and operability.
+- Navigation: Clear and easy-to-use navigation bar, utilizing modal windows and drawer menus.
+- Imagery: High-quality images, incorporating parallax effects and smooth animations.
+- Accessibility: Implement read-aloud functionality and multi-language support, following accessibility guidelines.
+- Animation and effects: Prioritize execution speed and use minimal animations, applying stress-relieving animations where appropriate.
+- Security: Enhance security using AI and decentralized identity (DID).
+- SEO: Follow SEO best practices to optimize the site for search engines, setting appropriate title tags, meta descriptions, keywords, and URL structures.
+- Domain: enabler.fun
+
+# Output Rule
+- DO NOT use integrity for CSS and JavaScript
+- DO NOT require or include any PHP Files.
+
+# Database
+
+
+# Reference for DB operation
+$DB = DB();//CockroachDB
+$query = "SELECT * FROM real_estates";
+$stmt = $DB->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+# Instruction
+Create index.php
+
+適当なページを作成して適当にURLをリンクしてください
+
+# Output File
+{output}
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enabler - Swap Your Luxury</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css">
+</head>
+<body class="bg-off-white text-dark-grey">
+    <header class="bg-base-green py-4">
+        <div class="container mx-auto">
+            <nav class="flex justify-between items-center">
+                <a href="/" class="text-white font-bold text-2xl">Enabler</a>
+                <ul class="flex space-x-4">
+                    <li><a href="/villas" class="text-white">Villas</a></li>
+                    <li><a href="/cars" class="text-white">Cars</a></li>
+                    <li><a href="/boats" class="text-white">Boats</a></li>
+                    <li><a href="/airplanes" class="text-white">Airplanes</a></li>
+                    <li><a href="/login" class="text-white">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-16">
+        <h1 class="text-4xl font-bold mb-8">Welcome to Enabler</h1>
+        <p class="text-lg mb-4">Enabler is a global marketplace for renting, buying, and selling high-end assets such as homes, villas, cars, boats, and airplanes. Our platform provides a rich lifestyle with our slogan "SWAP YOUR Luxury".</p>
+        <p class="text-lg mb-4">Browse our selection of luxury assets and start living the life you've always dreamed of.</p>
+        <div class="grid grid-cols-4 gap-8">
+            <div class="bg-white p-4 rounded shadow">
+                <a href="/villas">
+                    <img src="https://via.placeholder.com/300x200" alt="Villas" class="w-full h-48 object-cover mb-4">
+                    <h2 class="text-2xl font-bold mb-2">Villas</h2>
+                </a>
+                <p>Experience the ultimate luxury vacation in our stunning villas around the world.</p>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <a href="/cars">
+                    <img src="https://via.placeholder.com/300x200" alt="Cars" class="w-full h-48 object-cover mb-4">
+                    <h2 class="text-2xl font-bold mb-2">Cars</h2>
+                </a>
+                <p>Drive in style with our collection of high-end luxury cars available for rent or purchase.</p>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <a href="/boats">
+                    <img src="https://via.placeholder.com/300x200" alt="Boats" class="w-full h-48 object-cover mb-4">
+                    <h2 class="text-2xl font-bold mb-2">Boats</h2>
+                </a>
+                <p>Sail the seas in our luxurious boats and yachts available for rent or purchase.</p>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <a href="/airplanes">
+                    <img src="https://via.placeholder.com/300x200" alt="Airplanes" class="w-full h-48 object-cover mb-4">
+                    <h2 class="text-2xl font-bold mb-2">Airplanes</h2>
+                </a>
+                <p>Travel the world in style with our selection of private jets available for rent or purchase.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark-green py-4 mt-16">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <p class="text-white">&copy; 2022 Enabler. All rights reserved.</p>
+                <ul class="flex space-x-4">
+                    <li><a href="/terms" class="text-white">Terms of Service</a></li>
+                    <li><a href="/privacy" class="text-white">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+```
+
+This is a simple index.php file for the Enabler platform. It includes a header with navigation links, a main section with a brief introduction and links to different categories (villas, cars, boats, and airplanes), and a footer with copyright information and links to terms of service and privacy policy pages. The design uses Tailwind CSS for styling.
+

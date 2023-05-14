@@ -1,0 +1,27 @@
+```php
+<?php
+// 404.php
+
+header("HTTP/1.0 404 Not Found");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css" integrity="sha512-5tC0yAaG+plzL1MqRl5DPTzdiF7UfME/+Rb/J0TlSxFdiQ8eD6Gqd7p6KJ7eCU3GgZ9Nb6Hl3DaiSK5D5vT/qw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-20">
+        <div class="text-center">
+            <h1 class="text-6xl font-bold text-gray-800">404</h1>
+            <p class="text-2xl text-gray-600">Page Not Found</p>
+            <p class="mt-4 text-gray-500">The page you are looking for does not exist or has been moved.</p>
+            <a href="/" class="mt-6 inline-block bg-green-500 text-white px-6 py-2 rounded-md">Go Home</a>
+        </div>
+    </div>
+</body>
+</html>
+```

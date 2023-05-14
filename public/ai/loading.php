@@ -16,40 +16,57 @@ if(isset($_GET["code"]) && isset($_GET["prompt"]) && isset($_GET["script"])) {
       mkdir($folder_path, 0777, true);
     }
     file_put_contents($file, $_GET["code"]);
-    $buf = file_get_contents($_GET["script"]);
+    $buf = file_get_contents(dirname(__DIR__)."/../".$_GET["script"]);
     $buf = preg_replace("/PROMPT\([\"|'](.*?)[\"|']\)/is","PROMPT(\"{$_GET["prompt"]}\")",$buf);
 
 if(!$buf){
-$buf = "PROMPT(\"{$_GET["prompt"]}\")";
-
+  $buf = "<?php\nPROMPT(\"{$_GET["prompt"]}\");";
 }
-    file_put_contents($_GET["script"],$buf);
+    file_put_contents(dirname(__DIR__)."/../".$_GET["script"],$buf);
 
     exit();
 }
 
 if (
-    isset($_GET["prompt"])
+    isset($_GET["prompt"]) &&
+    isset($_GET["script"])
 ) {
   $prompt = $_GET["prompt"];
 
   $file = dirname(__FILE__)."/../../cache/AI_".md5($prompt).".cache";
-  
-  if (!file_exists($file)) {  
-    $buf = LIVE($prompt);
+
+  if (file_exists($file)) {  
+    $buf = file_get_contents($file);
   }
+
+  if (!file_exists($file) || !$buf) {  
+    $buf = LIVE($prompt,$_GET["script"]);
+  }
+  
+  header('Content-Type: text/event-stream');
+  header('Cache-Control: no-cache');
+  header('Connection: keep-alive');
+  
+  echo "data: ".json_encode(["code"=>$buf])."\n\n";
+  echo "data: [DONE]";
   exit();
 
 }
 
-$script = $_SERVER['SCRIPT_FILENAME'];
-if(preg_match("/router.php$/",$script)){
+$script = str_replace(str_replace("/ai","",__DIR__),"",$_SERVER['SCRIPT_FILENAME']);
+
+if(preg_match("/router\.php$/",$script)){
    $script = "..".parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
   
 }
+if(preg_match("/loading\.php$/",$script)){
+  echo "Error: Not Found";
+  exit();
+}
+
 
 if(isset($_GET["code"]) && isset($_GET["execute"])) {
-  eval($_GET["code"]);
+  echo eval($_GET["code"]);
   exit();
 }
   
@@ -73,6 +90,8 @@ if(isset($_GET["code"]) && isset($_GET["execute"])) {
   <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/php/php.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/sql/sql.min.js"></script>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.1/theme/monokai.min.css" />
+  <script src="//cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+
   <style>
 body {
   background-color: #2c3e50;
@@ -110,32 +129,35 @@ button:hover {
 
 <body>
 <div class="container mt-5">
-  <h1 class="text-center mb-5">Enabler Web Builder</h1>
+  <h1 class="text-center mb-5">Web Magic</h1>
   <div class="row">
     <div class="col-md-12">
 
       <h2>Prompt</h2>
-      <textarea id="prompt" class="form-control" rows="30"><?php echo $prompt?></textarea>
+      <textarea id="prompt" class="form-control" rows="30"><?php if(isset($prompt)) echo $prompt;?></textarea>
 
       <button id="generate-code" class="btn btn-primary">Promptを元にコード生成する</button>
 
       <h2>Code</h2>
-      <textarea id="code" class="form-control" rows="20"><?php echo $code?></textarea>
+      <textarea id="code" class="form-control" rows="20"><?php if(isset($code)) echo $code;?></textarea>
 
       <h2>Script</h2>
       <input id="script" class="form-control" value="<?php echo $script?>">
 
-      <div class="col-md-6 d-flex align-items-end">
-        <button id="save" class="btn btn-primary ml-3">コードを保存</button>
-        <button id="execute" class="btn btn-primary ml-3">コードを実行</button>
-      </div>
+<div class="col-md-6 d-flex align-items-end">
+  <button id="save" class="btn btn-primary ml-3">コードを保存</button>
+  <button id="execute" class="btn btn-primary ml-3">コードを実行</button>
+  <button id="switch-to-wysiwyg" class="btn btn-primary ml-3">WYSIWYGエディタに切り替え</button>
+<button type="button" id="check-site-btn" class="btn btn-secondary">サイトを確認する</button>
+</div>
+
       
       
 </div>
 
 <script>
 <?php
-if(!$code){
+if(!isset($code)){
 ?>
 window.onload = function() {
   var promptText = document.getElementById("prompt").value;
@@ -154,8 +176,9 @@ class App {
  attachEventListeners() {
    
   document.getElementById("generate-code").addEventListener("click", () => {
+    const script = this.codeMirrorInstances.get("script").getValue();
     const prompt = this.codeMirrorInstances.get("prompt").getValue();
-    this.generate(prompt);
+    this.generate(prompt,script);
   });
   document.getElementById("save").addEventListener("click", () => {
     const code = this.codeMirrorInstances.get("code").getValue();
@@ -167,6 +190,17 @@ class App {
     const code = this.codeMirrorInstances.get("code").getValue();
     this.executePHP(code);
   });
+document.getElementById("switch-to-wysiwyg").addEventListener("click", () => {
+  const code = this.codeMirrorInstances.get("code").getValue();
+  this.codeMirrorInstances.get("code").toTextArea();
+  CKEDITOR.replace('code');
+  CKEDITOR.instances.code.setData(code);  
+});
+const checkSiteBtn = document.getElementById("check-site-btn");
+checkSiteBtn.addEventListener("click", function() {
+  const script = document.getElementById("script").value;
+  window.open(script, '_blank');
+});
 
 }
 
@@ -201,14 +235,14 @@ class App {
     });
   }
 
-generate(prompt) {
+generate(prompt,script) {
   if (!prompt) {
     alert("Error: prompt missing");
     return;
   }
 
   let buf = '';
-  const url = `/ai/loading.php?prompt=${encodeURIComponent(prompt)}`;
+  const url = `/ai/loading.php?prompt=${encodeURIComponent(prompt)}&script=${encodeURIComponent(script)}`;
 
   let eventSource = new EventSource(url);
   
@@ -221,16 +255,28 @@ generate(prompt) {
   eventSource.onmessage = (e) => {
     const data = e.data;
       try {
+
+        const currentCodeInstance = this.codeMirrorInstances.get("code");
+        
+        if(JSON.parse(data).code){
+          alert('キャッシュファイルが読み出されました。変更したい場合はプロンプトを変更するかキャッシュファイルを削除してください。');
+          currentCodeInstance.setValue(JSON.parse(data).code);
+          eventSource.close();
+          return;
+        }
+
+
         const parsedData = JSON.parse(data);
         const response = parsedData.choices[0];
 
         if(response.delta.content){
           buf += response.delta.content;
         }
-        const currentCodeInstance = this.codeMirrorInstances.get("code");
+
         if (currentCodeInstance) {
           currentCodeInstance.setValue(removeStartAndEnd(buf));
         }
+
         
         
       } catch (error) {}

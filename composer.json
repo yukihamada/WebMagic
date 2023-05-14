@@ -1,5 +1,6 @@
 {
     "require": {
-        "fakerphp/faker": "^1.21"
+        "fakerphp/faker": "^1.21",
+        "vlucas/phpdotenv": "^5.5"
     }
 }

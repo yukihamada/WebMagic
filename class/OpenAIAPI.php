@@ -32,6 +32,8 @@ class OpenAIApi {
             "top_p" => 1,
             "frequency_penalty" => 0,
             "presence_penalty" => 0,
+            "stop"=>"```",
+//            "best_of"=>3,
             "stream" => $stream
         ];
     }
@@ -81,7 +83,11 @@ public function getResponse($messages, $maxTokens = 2000, $temperature = 0, $str
 
     if (!$stream) {
         $result = json_decode($response, true);
+      if(isset($result["choices"][0]["message"]["content"])){
         $content = $result["choices"][0]["message"]["content"];
+      }else{
+        $contemt = $response;
+      }
         $this->logConversation($messages, $content);
         return $content;
     } else {
@@ -101,7 +107,7 @@ public function getResponse($messages, $maxTokens = 2000, $temperature = 0, $str
         $text = "";
         foreach ($parsedData as $item) {
           if(isset($item['choices'][0]['delta']['content'])){
-            $text .= $item['choices'][0]['delta']['content'];            
+            $text .= $item['choices'][0]['delta']['content'];        
           }
         }
 

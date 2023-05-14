@@ -1,14 +1,26 @@
 <?php
+require 'vendor/autoload.php';
 
-// LINEで開かれた時に別ウインドウにするためにopenExternalBrowserのパラメータをなくす
-if(isset($_GET["openExternalBrowser"])){
-  unset($_GET["openExternalBrowser"]);
-  $p = parse_url($_SERVER["REQUEST_URI"]);
-  header("Location: ".$p["path"]."?".http_build_query($_GET));
-  exit();
+$openai_apikey = getenv('OpenAI_APIKEY');
+
+if (!$openai_apikey) {
+    $dotenvFilePath = __DIR__ . '/.env';
+    
+    if (!file_exists($dotenvFilePath)) {
+        die('The .env file does not exist. Please create it with necessary variables. Refer to .env.template for guidance.');
+    }
+    
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+
+    $openai_apikey = getenv('OpenAI_APIKEY');
+    
+    if (!$openai_apikey) {
+        die('OpenAI_APIKEY is not set. Please set it in .env file or in system environment variables.');
+    }
 }
 
-date_default_timezone_set('Asia/Tokyo');
+
 session_start();
 
 $projectRootPath = dirname(__FILE__)."/../../";
@@ -16,7 +28,7 @@ ini_set('include_path', $projectRootPath . PATH_SEPARATOR . get_include_path());
 
 
 spl_autoload_register(function ($class) {
-echo $class;
+
   // クラスファイルを探すディレクトリ
     $directories = [
         dirname(__FILE__).'/../../',
@@ -35,10 +47,12 @@ echo $class;
     }
 });
 
-function LIVE($prompt, $cache = true){
+function LIVE($prompt, $output){
+
   $file = dirname(__FILE__)."/../../cache/AI_".md5($prompt).".cache";
     if(file_exists($file)){
-     return file_get_contents($file,$prompt);
+     $buf = file_get_contents($file,$prompt);
+    if($buf) return $buf;
    }
     @ini_set('zlib.output_compression', 0);
     @ini_set('output_buffering', 'off');
@@ -50,9 +64,9 @@ function LIVE($prompt, $cache = true){
     header("Cache-Control: no-cache");
 
   $dir = dirname(__FILE__)."/prompt/";
-  $buf = file_get_contents("{$dir}index.txt");
+  $index = file_get_contents("{$dir}index.txt");
 
-$txts = AI("User Request
+  $txts = AI("User Request
 {$prompt}
 
 Please select the required documents to answer from the list below.
@@ -61,26 +75,31 @@ Please select the required documents to answer from the list below.
 
 Txt(Comma sepalated)=");
 
-$array = explode(',', $txts);
 
-$database = ""; //結果を入れるための変数
-
-foreach ($array as $filename) {
-  if(file_exists($dir.trim($filename))){
-    $data = file_get_contents($dir.trim($filename));  
-    $database .= $data."\n"; //改行を加えて文字列に加える
-  }
-  //ファイルを読み込む
-}
+  if($txts){
+    $array = explode(',', $txts);
   
-  $buf = @str_replace('{database}', $database, $buf);
-  $prompt = @str_replace('{instruction}', $prompt, $buf);
-  $openAI = new OpenAIAPI(getenv('OpenAI_APIKEY'));
-  $text = @$openAI->getPromptResponse($prompt, 4000,0,true);
-
-  if($cache){
-    file_put_contents($file,$text);
+    $database = "";
+    if(count($array) > 0){
+      foreach ($array as $filename) {
+        $filename = trim($filename);
+        if(file_exists($dir.$filename) && $filename != "index.txt"){
+          die($dir.$filename);
+          $data = file_get_contents($dir.$filename);
+          $database .= $data."\n";
+        }
+      }
+    }      
   }
+
+  $index = @str_replace('{database}', $database, $index);
+  $index = @str_replace('{instruction}', $prompt, $index);
+  $index = @str_replace('{output}', $output, $index);
+
+  $openAI = new OpenAIAPI(getenv('OpenAI_APIKEY'));
+  $text = @$openAI->getPromptResponse($index, 4000,0,true);
+
+  file_put_contents($file,$text);
   return $text;
 }
 
@@ -103,8 +122,10 @@ function AI($prompt,$cache = true,$model = "gpt-4"){//gpt-3.5-turbo
 function prompt($prompt){
 
   $edit = false;
-  if(@$_GET["m"] === 'e'){
-    $edit = true;
+  if(isset($_GET["m"])){
+    if($_GET["m"] === 'e'){
+      $edit = true;
+    }    
   }
 
   $code = '';
@@ -117,6 +138,17 @@ function prompt($prompt){
 
   if(file_exists($file)){
     $code = file_get_contents($file);
+  }
+
+  if(!$prompt){
+    $url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
+    if (substr($url, -1) == "/") $url .= "index.php";
+    $prompt = "Create {$url}";
+  }
+
+  if(isset($_GET["error"])){
+    $error = $_GET["error"];
+    $prompt = $code ."\n\nFix the error in the code abobe.\n\n{$error}";
   }
   
   $dir = dirname(__FILE__)."/prompt/";
@@ -178,3 +210,5 @@ function DB(){
   );
   return $conn;
 }
+
+
