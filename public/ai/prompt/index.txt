@@ -44,8 +44,8 @@ Enabler is a global marketplace for renting, buying, and selling high-end assets
 - Business goals: Target affluent customers and provide a platform for renting and buying luxury items such as villas, airplanes, boats, and cars. Focus on villas to achieve sales targets and market share. Expand the service to include items such as watches, fashion items, and appliances.
 - Target users: Affluent customers and those interested in luxury items.
 - Service description: A platform centered around villas for renting and buying luxury items such as cars, airplanes, and boats. Frequently used features are placed in easily accessible locations, with a focus on smartphone operability.
-- Color scheme: Base Green (#4CAF50), Dark Green (#388E3C), Light Green (#C8E6C9), Sub Color (Blue) (#2196F3), Background Color (Off White) (#FAFAFA), Text Color (Dark Grey) (#424242).
-- Typography: Font Family (Noto Sans), Main Body Text (18px), Subtitles (24px), Titles (48px), Navigation Bar Text (16px).
+- Color scheme: #f4b404,#f4b404,#ffffff(background),#6d6d6d(text)
+- Typography: Font Source Han Sans, Main Body Text (18px), Subtitles (24px), Titles (48px), Navigation Bar Text (16px).
 - Layout: Simple and clean design, responsive design, focus on usability and operability.
 - Navigation: Clear and easy-to-use navigation bar, utilizing modal windows and drawer menus.
 - Imagery: High-quality images, incorporating parallax effects and smooth animations.
@@ -61,6 +61,7 @@ Enabler is a global marketplace for renting, buying, and selling high-end assets
 # Output Rule
 - DO NOT use integrity for CSS and JavaScript
 - DO NOT require or include any PHP Files.
+- Generate PHP, JavaScript, and CSS on the same page.
 
 # Instruction
 {instruction}
