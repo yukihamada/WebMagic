@@ -1,13 +1,14 @@
 <?php
 
+
 if(isset($_GET["code"]) && isset($_GET["prompt"]) && isset($_GET["script"])) {
     $_GET["script"] = ltrim($_GET["script"], '/');
 
     $file = dirname(__FILE__)."/../../cache/AI_".md5($_GET["prompt"]).".cache";
     if (file_exists($file)) {
         $time = date("Ymd_His");
-        $ext = pathinfo($file, PATHINFO_EXTENSION);
-        $name = pathinfo($file, PATHINFO_FILENAME);
+        $ext = pathinfo($_GET["script"], PATHINFO_EXTENSION);
+        $name = pathinfo($_GET["script"], PATHINFO_FILENAME);
         $newFilename = "backups/".$name . "_" . $time . "." . $ext;                 
         rename($file, $newFilename);
     }
@@ -16,7 +17,7 @@ if(isset($_GET["code"]) && isset($_GET["prompt"]) && isset($_GET["script"])) {
     if (!file_exists($folder_path)) {
       mkdir($folder_path, 0777, true);
     }
-  dd($file);
+
     file_put_contents($file, $_GET["code"]);
 
     $buf = file_get_contents(dirname(__DIR__)."/".$_GET["script"]);
@@ -79,6 +80,7 @@ if(isset($_GET["code"]) && isset($_GET["execute"])) {
   echo eval($_GET["code"]);
   exit();
 }
+
   
 ?><!DOCTYPE html>
 <html>
@@ -137,8 +139,8 @@ button:hover {
   </style>
 </head>
 
-<body>
-<div class="container mt-5">
+<body ondrop="event.preventDefault(); uploadFile(event.dataTransfer.items[0].getAsFile());" ondragover="event.preventDefault();">
+  <div class="container mt-5">
   <h1 class="text-center mb-5">Web Magic</h1>
   <div class="row">
     <div class="col-md-12">
@@ -147,7 +149,10 @@ button:hover {
       <textarea id="prompt" class="form-control" rows="30"><?php if(isset($prompt)) echo $prompt;?></textarea>
 
       <button id="generate-code" class="btn btn-primary">Promptを元にコード生成する</button>
+      <button id="uploadButton" onclick="document.getElementById('fileInput').click();">画像や動画などのファイルを添付する</button>
+    <input type="file" id="fileInput" style="display: none;" onchange="uploadFile(this.files[0]);">
 
+      
       <h2>Code</h2>
       <textarea id="code" class="form-control" rows="20"><?php if(isset($code)) echo $code;?></textarea>
 
@@ -160,7 +165,26 @@ button:hover {
 <button type="button" id="check-site-btn" class="btn btn-secondary">サイトを確認する</button>
 </div>
 
-      
+
+<?php
+$backup_dir = dirname(__FILE__).'/backups/';
+$current_file = basename($script, '.php');
+
+$files = scandir($backup_dir);
+
+foreach ($files as $file) {
+    $info = pathinfo($file);
+    $filename = basename($file, '.' . $info['extension']); // 拡張子を除いたファイル名
+    if (strpos($filename, $current_file) !== false) {
+        // ファイル名の後についた_の後が日付
+        $parts = explode('_', $filename);
+        $date = $parts[1]."_".$parts[2];
+
+        $url = "/{$current_file}?date=" . urlencode($date);
+        echo "<li><a href=\"$url\" target='_blank'>{$date}</a></li>";
+    }
+}
+?>
       
 </div>
 
@@ -177,7 +201,11 @@ class App {
   document.getElementById("generate-code").addEventListener("click", () => {
     const script = this.codeMirrorInstances.get("script").getValue();
     const prompt = this.codeMirrorInstances.get("prompt").getValue();
+    document.getElementById("generate-code").value = "Code Genarating ...";
+    document.getElementById("generate-code").disabled = true;
     this.generate(prompt,script);
+    document.getElementById("generate-code").value = "Genarate Code";
+    document.getElementById("generate-code").disabled = false;
   });
   document.getElementById("save").addEventListener("click", () => {
     const code = this.codeMirrorInstances.get("code").getValue();
@@ -189,12 +217,7 @@ class App {
     const code = this.codeMirrorInstances.get("code").getValue();
     this.executePHP(code);
   });
-// document.getElementById("switch-to-wysiwyg").addEventListener("click", () => {
-//   const code = this.codeMirrorInstances.get("code").getValue();
-//   this.codeMirrorInstances.get("code").toTextArea();
-//   CKEDITOR.replace('code');
-//   CKEDITOR.instances.code.setData(code);  
-// });
+
 const checkSiteBtn = document.getElementById("check-site-btn");
 checkSiteBtn.addEventListener("click", function() {
   const script = document.getElementById("script").value;
@@ -351,7 +374,23 @@ saveCode(code, prompt,script) {
 }
 const app = new App();
 
+const uploadFile = file => {
+    let formData = new FormData();
+    formData.append('file', file);
+    fetch('/ai/upload.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        let textArea = document.getElementById('prompt');
 
+        const currentCodeInstance = app.codeMirrorInstances.get("prompt");
+        currentCodeInstance.setValue(currentCodeInstance.getValue() + "\n" + data);
+    })
+    .catch(console.error);
+}
+  
 </script>
 </body>
 </html>

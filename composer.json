@@ -1,6 +1,7 @@
 {
     "require": {
         "fakerphp/faker": "^1.21",
-        "vlucas/phpdotenv": "^5.5"
+        "vlucas/phpdotenv": "^5.5",
+        "aws/aws-sdk-php": "^3.269"
     }
 }

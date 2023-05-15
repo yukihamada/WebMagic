@@ -68,12 +68,12 @@ function LIVE($prompt, $output){
 
   $txts = AI("User Request
 {$prompt}
-
+------------------------------
 Please select the required documents to answer from the list below.
 
 ".shell_exec("ls {$dir}")."
 
-Txt(Comma sepalated)=");
+Txt(Comma sepalated)=",true,"gpt-4",30);
 
 
   if($txts){
@@ -109,7 +109,7 @@ Txt(Comma sepalated)=");
   return $text;
 }
 
-function AI($prompt,$cache = true,$model = "gpt-4"){//gpt-3.5-turbo
+function AI($prompt,$cache = true,$model = "gpt-4",$max_token=5000){//gpt-3.5-turbo
   $file = dirname(__FILE__)."/../../cache/AI_".md5($prompt).".cache";
 
   if($cache && file_exists($file)){
@@ -117,7 +117,7 @@ function AI($prompt,$cache = true,$model = "gpt-4"){//gpt-3.5-turbo
   }
 
   $openAI = new OpenAIAPI(getenv('OpenAI_APIKEY'),$model);
-  $text = $openAI->getPromptResponse($prompt, 5000);
+  $text = $openAI->getPromptResponse($prompt, $max_token);
 
   if($cache){
     file_put_contents($file,$text);
@@ -134,6 +134,18 @@ function prompt($prompt){
     }    
   }
 
+  if(isset($_GET["date"])){
+    $url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
+    $url = preg_replace("/\.php$/","",$url);
+    if(file_exists(dirname(__FILE__)."/backups/{$url}_{$_GET["date"]}.php")){
+      include(dirname(__FILE__)."/backups/{$url}_{$_GET["date"]}.php");
+      exit();
+    }
+
+  }
+
+
+  
   $code = '';
   $file = dirname(__FILE__)."/../../cache/AI_".md5($prompt).".cache";
 

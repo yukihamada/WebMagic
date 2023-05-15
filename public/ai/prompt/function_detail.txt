@@ -1,0 +1,19 @@
+ # Requirements:
+
+- User authentication and profile management, including user registration, login, logout functionality, profile information editing functionality, and password reset functionality.
+- Property and item management, reservation functionality, and purchase functionality, including property and item registration, editing, deletion functionality, property and item search, filtering, sorting functionality, and reservation and purchase functionality.
+- User review and rating functionality.
+- Live commerce management, reservation functionality, and purchase functionality, including live commerce scheduling management functionality, live commerce viewing, chat participation functionality, and live commerce product purchasing functionality.
+- Auction management, bidding functionality, acceptance, and purchase functionality, including auction registration, editing, deletion functionality, bidding functionality, and auction acceptance and purchase functionality.
+- Streaming functionality and tipping functionality, including streaming scheduling management functionality, streaming viewing, chat participation functionality, and tipping functionality.
+- Role-based access control, including role definition for administrators, operators, and users, and setting access permissions for each role.
+- Inventory management functionality, including inventory registration, editing, deletion functionality, and inventory search, filtering, and sorting functionality.
+- Blockchain technology, including blockchainization of transactions and implementation of smart contracts.
+- Multi-channel support: web, all messenger apps, phone, including web application implementation, integration with messenger apps (Slack, Chatwork, Instagram, etc.), and phone API-based calling functionality.
+- Site requirements: responsive design, accessibility support, security measures, multi-language support, and SEO optimization.
+- Digital item management, purchase functionality, and auction functionality, including digital item registration, editing, deletion functionality, digital item search, filtering, sorting functionality, digital item purchase functionality, digital item auction listing, bidding, acceptance functionality, and blockchain-based transaction of digital items (NFTization).
+- Utilization of machine learning and AI, including recommendation system implementation, information extraction and tagging through image recognition, and introduction of AI chatbot.
+- Social media integration functionality, including SNS sharing functionality and automatic posting to social media functionality.
+- Point and reward system, including setting of point acquisition rules and provision of benefits and discounts through point usage.
+- Push notification functionality, including push notification for new information and announcements.
+- Data analysis and reporting functionality, including sales and usage analysis functionality and report creation functionality.
