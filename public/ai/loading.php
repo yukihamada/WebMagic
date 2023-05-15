@@ -3,7 +3,7 @@
 if(isset($_GET["code"]) && isset($_GET["prompt"]) && isset($_GET["script"])) {
     $_GET["script"] = ltrim($_GET["script"], '/');
 
-    $file = dirname(__FILE__)."/../cache/AI_".md5($_GET["prompt"]).".cache";
+    $file = dirname(__FILE__)."/../../cache/AI_".md5($_GET["prompt"]).".cache";
     if (file_exists($file)) {
         $time = date("Ymd_His");
         $ext = pathinfo($file, PATHINFO_EXTENSION);
@@ -16,16 +16,19 @@ if(isset($_GET["code"]) && isset($_GET["prompt"]) && isset($_GET["script"])) {
     if (!file_exists($folder_path)) {
       mkdir($folder_path, 0777, true);
     }
+  dd($file);
     file_put_contents($file, $_GET["code"]);
 
     $buf = file_get_contents(dirname(__DIR__)."/".$_GET["script"]);
-    $buf = preg_replace("/PROMPT\([\"|'](.*?)[\"|']\)/is","PROMPT(\"{$_GET["prompt"]}\")",$buf);
+
+    $buf = preg_replace("/PROMPT\([\"']([\s\S]*?)[\"']\)/is","PROMPT(\"{$_GET["prompt"]}\")",$buf);
 
 if(!$buf){
   $buf = "<?php\nPROMPT(\"{$_GET["prompt"]}\");";
 }
-    echo file_put_contents(dirname(__DIR__)."/".$_GET["script"],$buf);
+  echo dirname(__DIR__)."/".$_GET["script"];
 
+    echo file_put_contents(dirname(__DIR__)."/".$_GET["script"],$buf);
     exit();
 }
 
@@ -55,10 +58,12 @@ if (
 
 }
 
-if(!isset($_SERVER["PATH_INFO"])){
-  $_SERVER["PATH_INFO"] = "index.php";
+$script = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
+
+if(substr($script,-1)=="/"){
+  $script .= "index.php";
 }
-$script = $_SERVER["PATH_INFO"];
+
 
 if(!preg_match("/\.php$/",$script)){
    $script = $script.".php";

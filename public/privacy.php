@@ -1,0 +1,2 @@
+<?php
+PROMPT("Create /privacy");
