@@ -8,7 +8,7 @@ use Aws\Exception\AwsException;
 if(isset($_FILES['file'])){
   
   
-  $bucketName = 'enabler.fun';
+  $bucketName = 'c.eblr.io';
   $IAM_KEY = getenv('AWS_ACCESS_KEY');
   $IAM_SECRET = getenv('AWS_SECRET_KEY');
   

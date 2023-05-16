@@ -6,4 +6,6 @@ entrypoint = "public/index.php"
 channel = "stable-22_11"
 
 [deployment]
-run = ["sh", "-c", "php -S 0.0.0.0:8000 -t ."]
+run = ["sh", "-c", "php -S 0.0.0.0:8000 -t public public/router.php"]
+ignorePorts = false
+deploymentTarget = "gce"

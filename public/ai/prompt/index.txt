@@ -1,6 +1,6 @@
 # Project Overview:
 
-Enabler is a global marketplace for renting, buying, and selling high-end assets such as homes, villas, cars, boats, and airplanes. Initially focusing on luxury assets, we will implement a secure payment system and a rating and review system to ensure reliability. We will also develop an easy-to-use UI/UX design and mobile app, and provide a rapid customer support system. We will pay close attention to legal regulations and permits, and aim to spread our brand around the world with an effective marketing strategy. Our slogan is "SWAP YOUR Luxury" to provide a rich lifestyle. This project aims to develop a comprehensive platform for user authentication, profile management, property and item management, reservation and purchase functionality, live commerce, auction management, streaming, role-based access control, inventory management, blockchain technology, multi-channel support, digital item management, machine learning and AI utilization, social media integration, point and reward system, push notification functionality, and data analysis and reporting.
+  Enabler is a global marketplace for renting, buying, and selling high-end assets such as homes, villas, cars, boats, and airplanes. Initially focusing on luxury assets, we will implement a secure payment system and a rating and review system to ensure reliability. We will also develop an easy-to-use UI/UX design and mobile app, and provide a rapid customer support system. We will pay close attention to legal regulations and permits, and aim to spread our brand around the world with an effective marketing strategy. Our slogan is "SWAP YOUR Luxury" to provide a rich lifestyle. This project aims to develop a comprehensive platform for user authentication, profile management, property and item management, reservation and purchase functionality, live commerce, auction management, streaming, role-based access control, inventory management, blockchain technology, multi-channel support, digital item management, machine learning and AI utilization, social media integration, point and reward system, push notification functionality, and data analysis and reporting.
 
 # Technology Stack:
 
@@ -31,6 +31,10 @@ The website's domain should be enabler.fun.
 Your code must obey the following constraints:
 1.DO NOT use integrity for CSS and JavaScript
 2.DO NOT require or include any PHP Files.
+3.Ensure PHP handles API processing when needed.
+
+Please use this logo: https://s3.us-west-2.amazonaws.com/enabler.fun/87b6a10b1c.png
+The background color of the logo is #ef7d16.
 
 # Instruction
 {instruction}

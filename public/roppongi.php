@@ -1,7 +1,9 @@
 <?php
-PROMPT("六本木の物件の概要詳細ページ
+PROMPT("Create /roppongi
+六本木の物件の概要詳細ページ
 
-六本木交差点から徒歩3分にある夜景と水槽のあるタワーマンションの角部屋。
+六本木交差点から徒歩3分にある夜景と水槽のあるタワーマンションの角部屋
+
 
 最大ご宿泊人数 / 2名様
 部屋数 / 寝室x1・リビングルームx1
@@ -11,7 +13,7 @@ PROMPT("六本木の物件の概要詳細ページ
 ご宿泊料金 / 40,000円〜
 
 キッチン
-・IHコンロ2口
+・IHコンロ
 ・冷蔵庫
 ・ワインセラー
 ・電子レンジ
@@ -40,12 +42,12 @@ PROMPT("六本木の物件の概要詳細ページ
 ・床暖房
 ・エアコン
 ・Philips Hue 間接照明
-・Alexa
+・Google Home
+
 ※寝巻のご用意はございませんので、予めご了承ください。
-六本木
+
 
 下記の写真を掲載してください
 
-https://s3.us-west-2.amazonaws.com/enabler.fun/a23bd11d82.jpg
-https://s3.us-west-2.amazonaws.com/enabler.fun/824bc4b0bf.jpg
-");
+https://s3.us-west-2.amazonaws.com/enabler.fun/08a3ea2178.jpg
+https://s3.us-west-2.amazonaws.com/enabler.fun/a45ef403b2.jpg");

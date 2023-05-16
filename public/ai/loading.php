@@ -22,10 +22,10 @@ if(isset($_GET["code"]) && isset($_GET["prompt"]) && isset($_GET["script"])) {
 
     $buf = file_get_contents(dirname(__DIR__)."/".$_GET["script"]);
 
-    $buf = preg_replace("/PROMPT\([\"']([\s\S]*?)[\"']\)/is","PROMPT(\"{$_GET["prompt"]}\")",$buf);
+    $buf = preg_replace("/PROMPT\([\"']([\s\S]*?)[\"']\)/is","PROMPT(\"".addslashes($_GET["prompt"])."\")",$buf);
 
 if(!$buf){
-  $buf = "<?php\nPROMPT(\"{$_GET["prompt"]}\");";
+  $buf = "<?php\nPROMPT(\"".addslashes($_GET["prompt"])."\");";
 }
   echo dirname(__DIR__)."/".$_GET["script"];
 
@@ -148,10 +148,9 @@ button:hover {
       <h2>Prompt</h2>
       <textarea id="prompt" class="form-control" rows="30"><?php if(isset($prompt)) echo $prompt;?></textarea>
 
-      <button id="generate-code" class="btn btn-primary">Promptを元にコード生成する</button>
+      <button id="generate-code" class="btn btn-primary">コード生成する</button>
       <button id="uploadButton" onclick="document.getElementById('fileInput').click();">画像や動画などのファイルを添付する</button>
     <input type="file" id="fileInput" style="display: none;" onchange="uploadFile(this.files[0]);">
-
       
       <h2>Code</h2>
       <textarea id="code" class="form-control" rows="20"><?php if(isset($code)) echo $code;?></textarea>
@@ -174,7 +173,7 @@ $files = scandir($backup_dir);
 
 foreach ($files as $file) {
     $info = pathinfo($file);
-    $filename = basename($file, '.' . $info['extension']); // 拡張子を除いたファイル名
+    $filename = basename($file, '.' . $info['extension']);
     if (strpos($filename, $current_file) !== false) {
         // ファイル名の後についた_の後が日付
         $parts = explode('_', $filename);
@@ -201,11 +200,7 @@ class App {
   document.getElementById("generate-code").addEventListener("click", () => {
     const script = this.codeMirrorInstances.get("script").getValue();
     const prompt = this.codeMirrorInstances.get("prompt").getValue();
-    document.getElementById("generate-code").value = "Code Genarating ...";
-    document.getElementById("generate-code").disabled = true;
     this.generate(prompt,script);
-    document.getElementById("generate-code").value = "Genarate Code";
-    document.getElementById("generate-code").disabled = false;
   });
   document.getElementById("save").addEventListener("click", () => {
     const code = this.codeMirrorInstances.get("code").getValue();
@@ -258,8 +253,17 @@ checkSiteBtn.addEventListener("click", function() {
   }
 
 generate(prompt,script) {
+  const currentCodeInstance = this.codeMirrorInstances.get("code");
+  currentCodeInstance.setValue("👨‍💻🛠️🔄");
+    document.getElementById("generate-code").disabled = true;
+
+    document.getElementById("generate-code").value = "Code Genarating ...";
+    // this.generate(prompt,script);
+    // document.getElementById("generate-code").value = "Genarate Code";
+    // document.getElementById("generate-code").disabled = false;
+
   if (!prompt) {
-    alert("Error: prompt missing");
+    alert("⚠️💬");
     return;
   }
 
@@ -270,7 +274,7 @@ generate(prompt,script) {
   
   // Display errors if there are any during generation
   eventSource.onerror = () => {
-    alert("Error: failed to generate response");
+    alert("⚠️🤖💬❌");
     eventSource.close();
   }
 
@@ -286,7 +290,6 @@ generate(prompt,script) {
           eventSource.close();
           return;
         }
-
 
         const parsedData = JSON.parse(data);
         const response = parsedData.choices[0];
@@ -304,6 +307,7 @@ generate(prompt,script) {
       } catch (error) {}
     if (data === "[DONE]") {
       eventSource.close();
+      document.getElementById("generate-code").disabled = false;
       return;
     }
   }  
