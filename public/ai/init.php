@@ -103,7 +103,7 @@ Txt(Comma sepalated)=",true,"gpt-4",30);
   $index = @str_replace('{output}', $output, $index);
 
   $openAI = new OpenAIAPI(getenv('OpenAI_APIKEY'));
-  $text = @$openAI->getPromptResponse($index, 4000,0,true);
+  $text = @$openAI->getPromptResponse($index, 6000,0,true);
 
   file_put_contents($file,$text);
   return $text;

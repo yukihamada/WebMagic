@@ -1,18 +1,28 @@
 <?php
-PROMPT("Title: Join Nogizaka Exclusive - Create Your Asset Exchange Listing
+PROMPT("Immersive Luxury Visuals: Dynamic & Engaging
 
-Blog:
+[Immersive Luxury Visuals logo]
 
-Welcome to Nogizaka Exclusive, where you can SWAP YOUR Luxury and explore a world of high-end assets. To get started with listing your luxurious assets for exchange, please follow the steps below and complete our simple form.
+[High-quality background image of a luxurious setting, such as an exclusive event or high-end products]
 
-Asset Type: First, let us know what type of asset you would like to exchange. Examples include villas, boats, airplanes, and cars.
+Luxury Visual Strategy at a Glance
 
-Location: Next, provide the address or location of the asset. This information helps potential exchange partners understand where your asset is situated.
+Morphing Imagery: Seamlessly transition between captivating images to showcase our luxury offerings and experiences.
+[Insert a morphing image sequence featuring luxury items, events, and experiences]
 
-Availability: Select how many days per year you are willing to make your asset available for exchange. Choose from the following options: 10 days, 30 days, 100 days, 330 days, or 365 days.
+Lifestyle Focus: Highlight the aspirational lifestyle associated with our brand.
+[Insert a morphing image sequence of exclusive events or experiences]
 
-Email Address: Enter your email address, so we can contact you with any inquiries or updates regarding your asset listing.
+Interactive Tours: Explore our offerings through immersive, 360-degree virtual tours.
+[Insert a sample screenshot of a virtual tour interface with morphing hotspots]
 
-Phone Number: Finally, provide your phone number for additional communication and verification purposes.
+Artist Collaborations: Join forces with renowned visual artists to create dynamic, captivating content.
+[Insert a morphing image sequence of artistic luxury photographs created by collaborating artists]
 
-Once you have completed the form, our team will review your listing and contact you with any further questions or to confirm your listings approval. Thank you for choosing Nogizaka Exclusive as your premier destination for luxury asset exchange. We look forward to helping you elevate your lifestyle with our global luxury marketplace.");
+Key Success Factors
+
+Cohesive Visual Branding
+Platform Optimization
+Data-Driven Insights
+Emotional Connection
+[Include contact information and company details at the end of the slide]");
