@@ -15,4 +15,4 @@ Email Address: Enter your email address, so we can contact you with any inquirie
 
 Phone Number: Finally, provide your phone number for additional communication and verification purposes.
 
-Once you have completed the form, our team will review your listing and contact you with any further questions or to confirm your listing\'s approval. Thank you for choosing Nogizaka Exclusive as your premier destination for luxury asset exchange. We look forward to helping you elevate your lifestyle with our global luxury marketplace.");
+Once you have completed the form, our team will review your listing and contact you with any further questions or to confirm your listings approval. Thank you for choosing Nogizaka Exclusive as your premier destination for luxury asset exchange. We look forward to helping you elevate your lifestyle with our global luxury marketplace.");

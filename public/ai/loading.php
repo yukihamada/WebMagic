@@ -22,10 +22,10 @@ if(isset($_GET["code"]) && isset($_GET["prompt"]) && isset($_GET["script"])) {
 
     $buf = file_get_contents(dirname(__DIR__)."/".$_GET["script"]);
 
-    $buf = preg_replace("/PROMPT\([\"']([\s\S]*?)[\"']\)/is","PROMPT(\"".addslashes($_GET["prompt"])."\")",$buf);
+    $buf = preg_replace("/PROMPT\([\"']([\s\S]*?)[\"']\)/is","PROMPT(\"".str_replace('"', '\"', $_GET["prompt"])."\")",$buf);
 
 if(!$buf){
-  $buf = "<?php\nPROMPT(\"".addslashes($_GET["prompt"])."\");";
+  $buf = "<?php\nPROMPT(\"".str_replace('"', '\"', $_GET["prompt"])."\");";
 }
   echo dirname(__DIR__)."/".$_GET["script"];
 
