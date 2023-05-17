@@ -274,8 +274,8 @@ generate(prompt,script) {
   
   // Display errors if there are any during generation
   eventSource.onerror = () => {
-    alert("⚠️🤖💬❌");
-    eventSource.close();
+//    alert("⚠️🤖💬❌");
+//    eventSource.close();
   }
 
   eventSource.onmessage = (e) => {

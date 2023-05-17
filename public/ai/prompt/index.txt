@@ -1,40 +1,32 @@
-# Project Overview:
+Project Summary:
 
-  Enabler is a global marketplace for renting, buying, and selling high-end assets such as homes, villas, cars, boats, and airplanes. Initially focusing on luxury assets, we will implement a secure payment system and a rating and review system to ensure reliability. We will also develop an easy-to-use UI/UX design and mobile app, and provide a rapid customer support system. We will pay close attention to legal regulations and permits, and aim to spread our brand around the world with an effective marketing strategy. Our slogan is "SWAP YOUR Luxury" to provide a rich lifestyle. This project aims to develop a comprehensive platform for user authentication, profile management, property and item management, reservation and purchase functionality, live commerce, auction management, streaming, role-based access control, inventory management, blockchain technology, multi-channel support, digital item management, machine learning and AI utilization, social media integration, point and reward system, push notification functionality, and data analysis and reporting.
+Enabler is a worldwide marketplace designed for dealing with premium assets such as luxury homes, cars, boats, and planes. Initially targeting high-end assets, we plan to include a secure payment, rating, and review system. The goal is to create an intuitive UI/UX design, a mobile app, and quick customer support. We'll be attentive to legal norms and aim to globalize our brand via a strategic marketing plan. Our motto is "SWAP YOUR Luxury". The platform will incorporate various features including user authentication, property management, live commerce, blockchain technology, AI utilization, social media integration, push notifications, and data analysis.
 
-# Technology Stack:
+Tech Stack:
 
-- Backend: PHP8.2
-- Database: CockroachDB cloud
-- Storage: Amazon S3
-- Frontend: Tailwind CSS
-- Cloud services: AWS
+Backend: PHP8.2
+Database: CockroachDB cloud
+Storage: Amazon S3
+Frontend: Tailwind CSS
+Cloud: AWS
+
+Design Requirements:
+
+The platform needs to be clean and user-friendly for affluent customers interested mainly in villas. Use colors #174D29, #ffffff (background), and #6d6d6d (text). Typography should be Source Han Sans. Incorporate high-quality images with parallax effects and animations. Ensure accessibility and multi-language support. Clear navigation is required with modal windows and drawer menus. Design must be responsive across devices, prioritize execution speed, and follow SEO best practices. The website's domain will be enabler.fun.
+
+Logo:
+
+Use the logo: https://s3.us-west-2.amazonaws.com/c.eblr.io/fb1ce5c37d.png with a background color of #ef7d16.
+
+Coding Constraints:
+
+No integrity for CSS and JavaScript
+No requirement or inclusion of any PHP Files
+PHP should manage API processing when required.
 
 # Documents
 {database}
 {extra}
-
-Generate PHP, JavaScript, and CSS on the same page.
-The platform should be clean and user-friendly.
-The target audience should be affluent customers interested in renting/buying luxury items.
-The service should focus particularly on villas.
-The color scheme should consist of #174D29, #ffffff (background), and #6d6d6d (text).
-The typography should use Source Han Sans with specified sizes for various text elements.
-The design should incorporate high-quality images with parallax effects and animations.
-The platform should ensure accessibility with a read-aloud function and multi-language support.
-The navigation should be clear, utilizing modal windows and drawer menus.
-The design should be responsive across devices.
-The platform should prioritize execution speed and use minimal and stress-relieving animations.
-The platform should follow SEO best practices.
-The website's domain should be enabler.fun.
-
-Your code must obey the following constraints:
-1.DO NOT use integrity for CSS and JavaScript
-2.DO NOT require or include any PHP Files.
-3.Ensure PHP handles API processing when needed.
-
-Please use this logo: https://s3.us-west-2.amazonaws.com/c.eblr.io/fb1ce5c37d.png
-The background color of the logo is #ef7d16.
 
 # Instruction
 {instruction}
