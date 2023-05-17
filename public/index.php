@@ -51,6 +51,6 @@ footer
 テキストをいい感じに直して生成してください。
 
 ロゴは背景色は#fffにしてください。
-https://s3.us-west-2.amazonaws.com/c.eblr.io/d356bd7dd8.png");
+https://s3.us-west-2.amazonaws.com/c.eblr.io/fb1ce5c37d.png");
 
 ?>

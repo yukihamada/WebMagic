@@ -33,7 +33,7 @@ Your code must obey the following constraints:
 2.DO NOT require or include any PHP Files.
 3.Ensure PHP handles API processing when needed.
 
-Please use this logo: https://s3.us-west-2.amazonaws.com/enabler.fun/87b6a10b1c.png
+Please use this logo: https://s3.us-west-2.amazonaws.com/c.eblr.io/fb1ce5c37d.png
 The background color of the logo is #ef7d16.
 
 # Instruction
