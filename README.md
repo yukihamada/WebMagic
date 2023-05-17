@@ -87,6 +87,14 @@ This project is open-source under the MIT license.
 
 This system is under development and some features have not been implemented yet. It is not intended for use in a production environment, so please be careful when using it.
 
+&nbsp;
+
+***
+
+&nbsp;
+
+# ウェブマジック
+
 WebMagic: テキストからWebシステムを生成するLLMを使用した革新的なシステム 🌐🧙‍♂️
 
 WebMagicは、LLMを使用してユーザーの要件に基づいて動的にWebページやシステムを生成する革新的なテキストからWebシステムです。UI要素を作成するだけでなく、データベースとも対話できます。
@@ -167,6 +175,14 @@ PROMPT("
 ## 注意 ⚠️
 
 このシステムは開発中であり、一部の機能がまだ実装されていません。本番環境での使用を目的としていないため、使用には注意してください。
+
+&nbsp;
+
+***
+
+&nbsp;
+
+# 网页魔法
 
 WebMagic：使用LLM的文本到Web系统 🌐🧙‍♂️
 
