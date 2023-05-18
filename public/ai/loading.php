@@ -33,6 +33,22 @@ if(!$buf){
     exit();
 }
 
+// Edit
+if(isset($_GET["code"]) && isset($_GET["edit"])) {
+    $prompt = $_GET["edit"];
+    $file = dirname(__FILE__)."/../../cache/AI_".md5($prompt).".cache";
+  
+    if (file_exists($file)) {  
+      $buf = file_get_contents($file);
+    }
+  
+    if (!file_exists($file) || !$buf) {  
+      $buf = EDIT($prompt,$_GET["code"]);
+    }  
+    exit();
+}
+
+
 if (
     isset($_GET["prompt"]) &&
     isset($_GET["script"])
@@ -141,7 +157,6 @@ button:hover {
 
 <body ondrop="event.preventDefault(); uploadFile(event.dataTransfer.items[0].getAsFile());" ondragover="event.preventDefault();">
   <div class="container mt-5">
-  <h1 class="text-center mb-5">Web Magic</h1>
   <div class="row">
     <div class="col-md-12">
 
@@ -153,8 +168,18 @@ button:hover {
     <input type="file" id="fileInput" style="display: none;" onchange="uploadFile(this.files[0]);">
       
       <h2>Code</h2>
+      <img src="https://c.eblr.io/5d263ae449.webp">
       <textarea id="code" class="form-control" rows="20"><?php if(isset($code)) echo $code;?></textarea>
 
+      <h2>Change</h2>
+      <input id="edit" class="form-control" value="">
+     <button id="edit-code" class="btn btn-primary">コード変更する</button>
+ 
+<div class="col-md-6 d-flex align-items-end">
+
+</div>
+
+      
       <h2>Script</h2>
       <input id="script" class="form-control" value="<?php echo $script?>">
 
@@ -201,6 +226,11 @@ class App {
     const script = this.codeMirrorInstances.get("script").getValue();
     const prompt = this.codeMirrorInstances.get("prompt").getValue();
     this.generate(prompt,script);
+    document.getElementById("generate-code").disabled = false;
+  });
+  document.getElementById("edit-code").addEventListener("click", () => {
+    const edit = this.codeMirrorInstances.get("edit").getValue();
+    this.edit(edit);
   });
   document.getElementById("save").addEventListener("click", () => {
     const code = this.codeMirrorInstances.get("code").getValue();
@@ -236,7 +266,8 @@ checkSiteBtn.addEventListener("click", function() {
     const textareas = [
         { id: "prompt", mode: "markdown" },
         { id: "script", mode: "markdown" },
-        { id: "code", mode: "php" }
+        { id: "code", mode: "php" },
+        { id: "edit", mode: "markdown" }
     ];
   
     this.codeMirrorInstances = new Map();
@@ -251,7 +282,72 @@ checkSiteBtn.addEventListener("click", function() {
   
     });
   }
+edit(prompt){
 
+  const currentCodeInstance = this.codeMirrorInstances.get("code");
+  let buf = '';
+
+ // const url = `/ai/loading.php?edit=${encodeURIComponent(prompt)}&code=hoge&model=gpt3.5`;
+ const url = `/ai/loading.php?edit=${encodeURIComponent(prompt)}&code=${encodeURIComponent(currentCodeInstance.getValue())}`;
+
+  
+  currentCodeInstance.setValue("👨‍💻🛠️🔄");
+    document.getElementById("generate-code").disabled = true;
+
+    document.getElementById("generate-code").value = "Code Genarating ...";
+    // this.generate(prompt,script);
+    // document.getElementById("generate-code").value = "Genarate Code";
+    // document.getElementById("generate-code").disabled = false;
+
+  if (!prompt) {
+    alert("⚠️💬");
+    return;
+  }
+
+
+  let eventSource = new EventSource(url);
+  
+  // Display errors if there are any during generation
+  eventSource.onerror = () => {
+//    alert("⚠️🤖💬❌");
+//    eventSource.close();
+  }
+
+  eventSource.onmessage = (e) => {
+    const data = e.data;
+      try {
+
+        const currentCodeInstance = this.codeMirrorInstances.get("code");
+        
+        if(JSON.parse(data).code){
+          alert('キャッシュファイルが読み出されました。変更したい場合はプロンプトを変更するかキャッシュファイルを削除してください。');
+          currentCodeInstance.setValue(JSON.parse(data).code);
+          eventSource.close();
+          return;
+        }
+
+        const parsedData = JSON.parse(data);
+        const response = parsedData.choices[0];
+
+        if(response.delta.content){
+          buf += response.delta.content;
+        }
+
+        if (currentCodeInstance) {
+          currentCodeInstance.setValue(buf);
+        }
+
+        
+        
+      } catch (error) {}
+    if (data === "[DONE]") {
+      eventSource.close();
+      return;
+    }
+  }  
+  
+  
+}
 generate(prompt,script) {
   const currentCodeInstance = this.codeMirrorInstances.get("code");
   currentCodeInstance.setValue("👨‍💻🛠️🔄");
@@ -299,7 +395,7 @@ generate(prompt,script) {
         }
 
         if (currentCodeInstance) {
-          currentCodeInstance.setValue(removeStartAndEnd(buf));
+          currentCodeInstance.setValue(buf);
         }
 
         
@@ -312,22 +408,6 @@ generate(prompt,script) {
     }
   }  
   
-  function removeStartAndEnd(text) {
-    const startString = "```php\n";
-    const endString = "```";
-    let result = text;
-  
-    if (result.startsWith(startString)) {
-      result = result.slice(startString.length);
-    }
-  
-    if (result.endsWith(endString)) {
-      result = result.slice(0, -endString.length);
-    }
-  
-    return result;
-  }
-    
   
 }  
 

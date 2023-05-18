@@ -1,3 +1,6 @@
 logs/*
 cache/*
 *.cache
+backups/
+backups/*
+

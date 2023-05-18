@@ -27,7 +27,7 @@ if(isset($_FILES['file'])){
 
 $fileExtension = pathinfo($_FILES["file"]["name"], PATHINFO_EXTENSION);
 $uniqueFileName = substr(hash('sha256', uniqid()),0,10) . '.' . $fileExtension;
-$pathInS3 = 'https://s3.us-west-2.amazonaws.com/' . $bucketName . '/' . $uniqueFileName;
+$pathInS3 = 'https://' . $bucketName . '/' . $uniqueFileName;
     
   try {
       $file = $_FILES["file"]["tmp_name"];

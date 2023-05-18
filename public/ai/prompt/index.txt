@@ -1,28 +1,36 @@
-Project Summary:
+# Project Overview
 
-Enabler is a worldwide marketplace designed for dealing with premium assets such as luxury homes, cars, boats, and planes. Initially targeting high-end assets, we plan to include a secure payment, rating, and review system. The goal is to create an intuitive UI/UX design, a mobile app, and quick customer support. We'll be attentive to legal norms and aim to globalize our brand via a strategic marketing plan. Our motto is "SWAP YOUR Luxury". The platform will incorporate various features including user authentication, property management, live commerce, blockchain technology, AI utilization, social media integration, push notifications, and data analysis.
+Develop 'Enabler', a global marketplace for premium assets, promoting the motto "SWAP YOUR Luxury".
+Initially focus on high-end assets, then gradually introduce a secure payment, rating, and review system.
+Execute a strategic marketing plan aiming for global brand presence.
 
-Tech Stack:
+# Technology
 
-Backend: PHP8.2
-Database: CockroachDB cloud
-Storage: Amazon S3
-Frontend: Tailwind CSS
-Cloud: AWS
+Integrate features such as user authentication, asset management, live commerce, and data analysis.
+Use blockchain technology for proof and tracking of asset ownership.
+Implement AI in the customer support system to enhance efficiency.
 
-Design Requirements:
+# Tech Stack
 
-The platform needs to be clean and user-friendly for affluent customers interested mainly in villas. Use colors #174D29, #ffffff (background), and #6d6d6d (text). Typography should be Source Han Sans. Incorporate high-quality images with parallax effects and animations. Ensure accessibility and multi-language support. Clear navigation is required with modal windows and drawer menus. Design must be responsive across devices, prioritize execution speed, and follow SEO best practices. The website's domain will be enabler.fun.
+Utilize PHP8.2 for the backend, avoid PHP include or require statements, and develop a program that is complete in a single PHP file.
+Use CockroachDB cloud for the database and Amazon S3 for storage.
+Tailwind CSS v2.219.
 
-Logo:
+# Design Requirements
 
-Use the logo: https://s3.us-west-2.amazonaws.com/c.eblr.io/fb1ce5c37d.png with a background color of #ef7d16.
+Aim for a clean, user-friendly design focused on affluent customers and villas.
+Use the color scheme #174D29, with a #ffffff background and #6d6d6d for text.
+Incorporate high-quality images, parallax effects, and animations in the design.
 
-Coding Constraints:
+# Coding Constraints
 
-No integrity for CSS and JavaScript
-No requirement or inclusion of any PHP Files
-PHP should manage API processing when required.
+Minimize source code, even at the expense of readability, but ensure security is not compromised.
+Use PHP to manage API processing when required.
+
+Miscellaneous:
+
+Use the domain enabler.fun.
+Use the specified logo: https://c.eblr.io/9205730f50.png
 
 # Documents
 {database}

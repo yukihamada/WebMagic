@@ -103,7 +103,48 @@ Txt(Comma sepalated)=",true,"gpt-4",30);
   $index = @str_replace('{output}', $output, $index);
 
   $openAI = new OpenAIAPI(getenv('OpenAI_APIKEY'));
-  $text = @$openAI->getPromptResponse($index, 5500,0,true);
+  $text = @$openAI->getPromptResponse($index, 6500,0,true);
+
+  file_put_contents($file,$text);
+  return $text;
+}
+
+function EDIT($edit, $code){
+    @ini_set('zlib.output_compression', 0);
+    @ini_set('output_buffering', 'off');
+    @ini_set('output_handler', '');
+    
+    ob_implicit_flush(true);
+    @ob_end_flush();
+    header("Content-Type: text/event-stream");
+    header("Cache-Control: no-cache");
+
+  $file = dirname(__FILE__)."/../../cache/AI_".md5($edit.$code).".cache";
+    if(file_exists($file)){
+     $buf = file_get_contents($file,$edit);
+    if($buf) return $buf;
+   }
+
+  $prompt = "Below is the current source code. Follow the instructions to make changes.
+```php
+{$code}
+```
+
+[instuction]
+{$edit}
+
+[output]
+```php
+";
+
+  $model = "gpt-4";
+  $max_token = 5500;
+  if(isset($_GET["model"])){
+    if($_GET["model"]=="gpt3.5") $model = "gpt-3.5-turbo";
+    $max_token = 4000;
+  }
+  $openAI = new OpenAIAPI(getenv('OpenAI_APIKEY'),$model);
+  $text = @$openAI->getPromptResponse($prompt, $max_token,0,true);
 
   file_put_contents($file,$text);
   return $text;
@@ -173,6 +214,42 @@ function prompt($prompt){
   
   include(dirname(__FILE__)."/loading.php");
 
+}
+
+function cache_data($name, $data = null, $expires = null)
+{
+    $hash = sha1($name);
+    $dirs = substr($hash, 0, 2) . '/' . substr($hash, 2, 2);
+    $cache_dir = dirname(__DIR__) . '/../cache/' . $dirs;
+
+    if (!is_dir($cache_dir)) {
+        mkdir($cache_dir, 0777, true);
+    }
+
+    $cache_file = $cache_dir . '/' . substr($hash, 4);
+
+    if ($data !== null) {
+        file_put_contents($cache_file, json_encode(['expires' => time() + $expires, 'data' => $data]));
+        return;
+    }
+
+    if (!file_exists($cache_file)) {
+        return false;
+    }
+
+    $cache_content = json_decode(file_get_contents($cache_file), true);
+
+    if ($expires === null || $cache_content['expires'] > time()) {
+        return $cache_content['data'];
+    }
+
+    unlink($cache_file);
+
+    if (rand(0, 1000) < 1) {
+        array_map('unlink', glob("$cache_dir/*"));
+    }
+
+    return false;
 }
 
 
